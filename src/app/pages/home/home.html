@@ -1,0 +1,472 @@
+<!-- <app-hero /> -->
+<main class="page active" id="page-home" data-page="home">
+  <!-- HERO -->
+  <header
+    class="hero min-h-screen flex items-end relative overflow-hidden pb-[clamp(40px,6vw,80px)]"
+  >
+    <!-- Real photo with parallax -->
+    <div class="hero-photo absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+      <img
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
+        alt="Heavy-lift crane operations"
+        id="hero-img"
+        fetchpriority="high"
+        class="absolute top-[-15%] left-0 w-full h-[130%] object-cover object-[center_35%] will-change-transform"
+      />
+    </div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <div class="wrap hero-inner z-3 w-full relative">
+      <span class="eyebrow reveal in">Nigeria's Heavy-Lift Specialists</span>
+      <h1
+        class="display text-[clamp(54px,8vw,120px)] font-stretch-110% tracking-[-0.02em] mt-5.5 mb-6.5"
+      >
+        <span class="line block overflow-hidden"><span>We lift.</span></span>
+        <span class="line block overflow-hidden"><span>We move.</span></span>
+        <span class="line block overflow-hidden"
+          ><span>We <em>deliver.</em></span></span
+        >
+      </h1>
+      <p class="lede hero-sub reveal in">
+        Crane hire, marine logistics, rigging and heavy-equipment solutions for Nigeria's
+        Oil&nbsp;&amp;&nbsp;Gas, Construction and Power sectors — engineered to perform since 2016.
+      </p>
+      <div class="hero-actions reveal d1 in">
+        <a href="#services" data-page="home" data-scroll="services" class="btn btn-signal"
+          >Our services <span class="arr">→</span></a
+        >
+        <a href="#gallery" data-page="gallery" class="btn btn-ghost"
+          >View projects <span class="arr">→</span></a
+        >
+      </div>
+      <div class="hero-data">
+        <div class="cell reveal d1 in">
+          <div class="num"><span data-count="2016">2016</span></div>
+          <div class="lbl">Operating since</div>
+        </div>
+        <div class="cell reveal d2 in">
+          <div class="num">
+            <span class="signal-text" data-count="100" data-suffix="T">100T</span>
+          </div>
+          <div class="lbl">Max lift capacity</div>
+        </div>
+        <div class="cell reveal d3 in">
+          <div class="num">24/7</div>
+          <div class="lbl">Marine operations</div>
+        </div>
+        <div class="cell reveal d4 in">
+          <div class="num"><span data-count="6">6</span></div>
+          <div class="lbl">Core service lines</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="arr-wrap"></div>
+    </div>
+  </header>
+
+  <div class="hazard" aria-hidden="true"></div>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span class="item">Crane Hire</span><span class="item">Marine Logistics</span
+      ><span class="item">Rigging &amp; Lifting</span><span class="item">Land Transport</span
+      ><span class="item">Engineering &amp; EPC</span><span class="item">Procurement</span>
+      <span class="item">Crane Hire</span><span class="item">Marine Logistics</span
+      ><span class="item">Rigging &amp; Lifting</span><span class="item">Land Transport</span
+      ><span class="item">Engineering &amp; EPC</span><span class="item">Procurement</span>
+    </div>
+  </div>
+
+  <!-- WHO WE ARE -->
+  <section class="section-pad band-basalt">
+    <div class="wrap split">
+      <div class="reveal-left in">
+        <span class="eyebrow">Who we are</span>
+        <h2
+          class="display"
+          style="font-size: clamp(34px, 5.5vw, 72px); margin: 20px 0 24px; letter-spacing: -0.015em"
+        >
+          Built for Nigeria's
+          <em class="signal-text" style="font-style: normal">toughest</em> projects
+        </h2>
+        <p class="lede" style="margin-bottom: 20px">
+          Magma Technical Services Nigeria Ltd is an indigenous service firm delivering quality
+          heavy-lift and logistics solutions to the Oil&nbsp;&amp;&nbsp;Gas, Construction and Power
+          sectors.
+        </p>
+        <p style="color: var(--steel-mut)">
+          From planning through to post-completion, we mobilise the right crew, the right equipment
+          and the right engineering to keep critical infrastructure moving — safely, on schedule,
+          and to spec.
+        </p>
+      </div>
+      <div class="pillars reveal-right in">
+        <div class="pillar">
+          <h3>Our Vision</h3>
+          <p>
+            To become Nigeria's premier engineering, logistics, construction and project-management
+            organisation — achieving extraordinary results for our clients.
+          </p>
+        </div>
+        <div class="pillar">
+          <h3>Our Mission</h3>
+          <p>
+            To provide clients with absolute best value while maintaining integrity and building
+            long-lasting, multiparty relationships.
+          </p>
+        </div>
+        <div class="pillar ember">
+          <h3>HSE Commitment</h3>
+          <p>
+            Safety isn't expensive — it's priceless. Frequent assessment, trained personnel and a
+            zero-harm standard underpin every lift we make.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE STANDARD (light band) -->
+  <section class="section-pad band-light">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow muted">The Magma standard</span>
+          <h2>One partner.<br />End to end.</h2>
+        </div>
+        <p class="side">
+          We close the gap between planning and execution. A single accountable team owns the lift
+          plan, the iron, the marine spread and the crew — so nothing falls between contractors on
+          the critical path.
+        </p>
+      </div>
+      <div class="stats">
+        <div class="stat reveal-scale in">
+          <div class="sv"><span data-count="100" data-suffix="T">100T</span></div>
+          <div class="sl">Rough-terrain lift capacity on deck</div>
+        </div>
+        <div class="stat reveal-scale d1 in">
+          <div class="sv"><span class="signal-text" data-count="9" data-suffix="+">9+</span></div>
+          <div class="sl">Years operating across Nigeria</div>
+        </div>
+        <div class="stat reveal-scale d2 in">
+          <div class="sv"><span data-count="24" data-suffix="/7">24/7</span></div>
+          <div class="sl">Coastal &amp; inland marine support</div>
+        </div>
+        <div class="stat reveal-scale d3 in">
+          <div class="sv"><span class="signal-text" data-count="0">0</span></div>
+          <div class="sl">Compromises on the HSE standard</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE SERVICES -->
+  <section class="section-pad band-ink" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Core services</span>
+          <h2>What we <em>do</em></h2>
+        </div>
+        <p class="side">
+          Six integrated service lines covering the full heavy-industrial scope — from the first
+          lift plan to the last load delivered to site.
+        </p>
+      </div>
+      <div class="svc-grid stagger in">
+        <article class="svc reveal in">
+          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path
+              d="M8 40h12V14l24-6"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linejoin="round"
+            />
+            <path d="M20 14l16 4" stroke="currentColor" stroke-width="2.5" />
+            <path d="M36 12v10M31 22h10" stroke="currentColor" stroke-width="2.5" />
+          </svg>
+          <div class="idx"><b>01</b> — Primary</div>
+          <h3>Crane Hire</h3>
+          <p>
+            Heavy-lift crane operations up to 100 tonnes. Link-Belt RTC-80100 rough-terrain and
+            American cranes for industrial, oil&nbsp;&amp;&nbsp;gas and construction sites.
+          </p>
+        </article>
+        <article class="svc reveal d1 in">
+          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path
+              d="M6 34c4 3 6 3 10 0s6-3 10 0 6 3 10 0 6-3 6-3"
+              stroke="currentColor"
+              stroke-width="2.5"
+            />
+            <path
+              d="M12 30l6-14h12l6 14"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linejoin="round"
+            />
+            <path d="M24 16V8" stroke="currentColor" stroke-width="2.5" />
+          </svg>
+          <div class="idx"><b>02</b> — Primary</div>
+          <h3>Marine Logistics</h3>
+          <p>
+            Tugboats, barges, landing craft and offshore support. 24/7 operations across Nigeria's
+            coastal and inland waterways.
+          </p>
+        </article>
+        <article class="svc reveal d2 in">
+          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M8 10h32" stroke="currentColor" stroke-width="2.5" />
+            <path d="M24 10v8" stroke="currentColor" stroke-width="2.5" />
+            <circle cx="24" cy="23" r="5" stroke="currentColor" stroke-width="2.5" />
+            <path
+              d="M19 27l-3 13h16l-3-13"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div class="idx"><b>03</b> — Primary</div>
+          <h3>Rigging &amp; Lifting</h3>
+          <p>
+            Specialist rigging, load planning and lifting engineering. Ropes, hawsers, shackles and
+            chains for complex heavy-lift operations.
+          </p>
+        </article>
+        <article class="svc reveal in">
+          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="6" y="18" width="24" height="14" stroke="currentColor" stroke-width="2.5" />
+            <path
+              d="M30 22h8l4 6v4h-12z"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linejoin="round"
+            />
+            <circle cx="14" cy="36" r="3.5" stroke="currentColor" stroke-width="2.5" />
+            <circle cx="34" cy="36" r="3.5" stroke="currentColor" stroke-width="2.5" />
+          </svg>
+          <div class="idx"><b>04</b></div>
+          <h3>Land Transport</h3>
+          <p>
+            Flatbeds, lowbeds, trailers and crew transport. Nationwide mobilisation for project
+            logistics, on time and on plan.
+          </p>
+        </article>
+        <article class="svc reveal d1 in">
+          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2.5" />
+            <path
+              d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"
+              stroke="currentColor"
+              stroke-width="2.5"
+            />
+          </svg>
+          <div class="idx"><b>05</b></div>
+          <h3>Engineering &amp; EPC</h3>
+          <p>
+            FEED, mechanical, electrical and instrumentation engineering. Civil, structural and full
+            EPC delivery for industrial assets.
+          </p>
+        </article>
+        <article class="svc reveal d2 in">
+          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path
+              d="M8 16l16-8 16 8-16 8z"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M8 16v16l16 8 16-8V16"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linejoin="round"
+            />
+            <path d="M24 24v16" stroke="currentColor" stroke-width="2.5" />
+          </svg>
+          <div class="idx"><b>06</b></div>
+          <h3>Procurement</h3>
+          <p>
+            Global supply chain for drilling fluids, chemicals, PPE, spare parts and heavy
+            equipment. OEM-grade sourcing, delivered to site.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT -->
+  <section class="section-pad band-basalt">
+    <div class="wrap equip">
+      <div class="reveal-left in">
+        <span class="eyebrow">Ready to deploy</span>
+        <h2
+          class="display"
+          style="font-size: clamp(38px, 6vw, 84px); margin: 20px 0 22px; letter-spacing: -0.02em"
+        >
+          Our<br />equipment
+        </h2>
+        <p style="color: var(--steel-mut); max-width: 380px; margin-bottom: 32px">
+          A growing fleet of cranes, marine vessels and heavy equipment available for short and
+          long-term hire — operated by trained personnel with full maintenance support.
+        </p>
+        <a href="#contact" data-page="contact" class="btn btn-signal"
+          >Browse equipment <span class="arr">→</span></a
+        >
+      </div>
+      <div class="equip-list reveal-right in">
+        <div class="equip-row">
+          <span class="rnum">01</span
+          ><span class="rname">Link-Belt RTC-80100 Rough Terrain Crane</span
+          ><span class="rcap">100T</span>
+        </div>
+        <div class="equip-row">
+          <span class="rnum">02</span><span class="rname">American Crane</span
+          ><span class="rcap">50T</span>
+        </div>
+        <div class="equip-row">
+          <span class="rnum">03</span><span class="rname">Tugboats &amp; Barges</span
+          ><span class="rcap">VARIOUS</span>
+        </div>
+        <div class="equip-row">
+          <span class="rnum">04</span><span class="rname">Forklifts &amp; Excavators</span
+          ><span class="rcap">FLEET</span>
+        </div>
+        <div class="equip-row">
+          <span class="rnum">05</span><span class="rname">Flatbed &amp; Lowbed Trucks</span
+          ><span class="rcap">HEAVY</span>
+        </div>
+        <div class="equip-row">
+          <span class="rnum">06</span><span class="rname">Piling Equipment</span
+          ><span class="rcap">RIG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS ON CRITICAL PATH -->
+  <section class="section-pad band-ink">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Selected work</span>
+          <h2>Projects on the <em>critical path</em></h2>
+        </div>
+        <p class="side">
+          <a href="#gallery" data-page="gallery" class="btn btn-ghost"
+            >All projects <span class="arr">→</span></a
+          >
+        </p>
+      </div>
+      <div class="plates stagger in">
+        <a class="plate reveal" href="#gallery" data-page="gallery">
+          <div class="para-wrap" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1200&q=80"
+              alt="Port Harcourt Refinery"
+              loading="lazy"
+            />
+          </div>
+          <div class="veil"></div>
+          <div class="pmeta">
+            <span class="ptag">Oil &amp; Gas · Rehabilitation</span>
+            <h3>Port Harcourt Refinery</h3>
+            <span class="ploc">Port Harcourt, Nigeria</span>
+            <p class="pdesc">
+              Crane hire and heavy-lift support for the ongoing rehabilitation of one of Nigeria's
+              most critical pieces of energy infrastructure.
+            </p>
+          </div>
+        </a>
+
+        <a class="plate reveal d1 in" href="#gallery" data-page="gallery">
+          <div class="para-wrap" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
+              alt="Olam Plant Maintenance"
+              loading="lazy"
+            />
+          </div>
+          <div class="veil"></div>
+          <div class="pmeta">
+            <span class="ptag">Plant Maintenance · Manufacturing</span>
+            <h3>Olam Plant Maintenance</h3>
+            <span class="ploc">Lagos, Nigeria</span>
+            <p class="pdesc">
+              Crane and rigging support for scheduled and unscheduled maintenance at Olam's Lagos
+              facility, ensuring minimal production downtime.
+            </p>
+          </div>
+        </a>
+
+        <a class="plate reveal in" href="#gallery" data-page="gallery">
+          <div class="para-wrap" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80"
+              alt="T209 Drilling Support"
+              loading="lazy"
+            />
+          </div>
+          <div class="veil"></div>
+          <div class="pmeta">
+            <span class="ptag">Drilling · Oil &amp; Gas</span>
+            <h3>T209 Drilling Support</h3>
+            <span class="ploc">Niger Delta, Nigeria</span>
+            <p class="pdesc">
+              Integrated lifting, transport and on-site support service for a live drilling
+              programme in the Niger Delta.
+            </p>
+          </div>
+        </a>
+
+        <a class="plate reveal d1 in" href="#gallery" data-page="gallery">
+          <div class="para-wrap" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80"
+              alt="Navy Vessel Maintenance"
+              loading="lazy"
+            />
+          </div>
+          <div class="veil"></div>
+          <div class="pmeta">
+            <span class="ptag">Marine · Defence</span>
+            <h3>Navy Vessel Maintenance</h3>
+            <span class="ploc">Coastal Nigeria</span>
+            <p class="pdesc">
+              Marine logistics and rigging support for naval vessel maintenance across coastal
+              operating bases.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-pad cta band-basalt">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="wrap cta-inner stagger in">
+      <span class="eyebrow" style="justify-content: center">Let's work together</span>
+      <h2 class="display" style="margin-top: 18px">Got a lift that<br />can't <em>fail?</em></h2>
+      <p>
+        Send us the scope. We'll mobilise the crew, the iron and the engineering to get it done —
+        safely and on schedule.
+      </p>
+      <div class="cta-actions">
+        <a href="#contact" data-page="contact" class="btn btn-signal"
+          >Get a quote <span class="arr">→</span></a
+        >
+        <a href="tel:09065033446" class="btn btn-ghost">0906 503 3446</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hazard thin" aria-hidden="true"></div>
+</main>

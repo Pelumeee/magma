@@ -1,0 +1,54 @@
+<header
+  class="nav fixed inset-x-0 top-0 z-50 transition-all duration-300"
+  [class.bg-black/80]="scrolled()"
+  [class.backdrop-blur-xl]="scrolled()"
+  [class.py-5]="!scrolled()"
+  [class.py-3]="scrolled()"
+>
+  <nav class="w-[90%] max-w-300 mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <a routerLink="/" class="relative z-50 flex items-center">
+      <img src="logo.png" alt="Magma" class="h-14 w-auto" />
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="hidden lg:flex items-center gap-9">
+      @for (link of links; track link.route) {
+        <a
+          [routerLink]="link.route"
+          routerLinkActive="text-white after:w-full"
+          [routerLinkActiveOptions]="{ exact: link.route === '/' }"
+          class="relative py-1 uppercase tracking-[0.13em] text-xs font-medium text-zinc-300 transition hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-500 after:transition-all hover:after:w-full"
+        >
+          {{ link.label }}
+        </a>
+      }
+    </div>
+
+    <!-- CTA -->
+    <div class="hidden lg:flex">
+      <a routerLink="/contact" class="group nav-cta">
+        Get a Quote
+        <span class="transition group-hover:translate-x-1"> → </span>
+      </a>
+    </div>
+
+    <!-- Mobile Toggle -->
+
+    <button (click)="toggleMenu()" class="relative z-50 flex lg:hidden flex-col gap-1.5">
+      <span
+        class="h-0.5 w-6 bg-white transition"
+        [class.translate-y-2]="menuOpen()"
+        [class.rotate-45]="menuOpen()"
+      ></span>
+
+      <span class="h-0.5 w-6 bg-white transition" [class.opacity-0]="menuOpen()"></span>
+
+      <span
+        class="h-0.5 w-6 bg-white transition"
+        [class.-translate-y-2]="menuOpen()"
+        [class.-rotate-45]="menuOpen()"
+      ></span>
+    </button>
+  </nav>
+</header>

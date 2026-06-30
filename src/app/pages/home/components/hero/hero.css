@@ -1,0 +1,15 @@
+/* ---------- HERO OVERLAYS ---------- */
+
+
+
+/* ---------- HERO TITLE ---------- */
+
+.line {
+  display: block;
+  overflow: hidden;
+}
+
+.line > span {
+  display: block;
+  transform: translateY(105%);
+}

@@ -1,3 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss';
 
-@import "tailwindcss";
+:root {
+  --ink: #0a0b0d;
+  --basalt: #121519;
+  --basalt-2: #181c21;
+  --steel-line: #262c33;
+  --steel: #39424b;
+  --steel-mut: #7e8a95;
+  --concrete: #b7bdc4;
+  --foundry: #eceae4;
+  --foundry-2: #e2e0d8;
+  --foundry-ink: #14161a;
+  --foundry-mut: #595f66;
+  --foundry-line: #cfccc2;
+  --signal: #ee781c;
+  --signal-deep: #c45e0e;
+  --ember: #d6391b;
+  --white: #f4f6f7;
+  --font-display: 'Archivo', 'Arial Narrow', sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+  --maxw: 1280px;
+  --gut: clamp(20px, 5vw, 64px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-3 bg-orange-500 px-6 py-3 uppercase tracking-[0.13em] text-xs font-medium text-black transition hover:-translate-y-0.5;
+  }
+
+  .nav-link {
+    @apply relative py-1 uppercase tracking-[0.13em] text-xs font-medium text-zinc-300 transition hover:text-white;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 -bottom-1 h-0.5 w-0 bg-orange-500 transition-all;
+  }
+
+  .nav-link:hover::after,
+  .nav-link-active::after {
+    @apply w-full;
+  }
+
+  .nav-cta {
+    @apply inline-flex items-center gap-3 bg-orange-500 px-6 py-3 uppercase tracking-[0.13em] text-xs font-medium text-black transition hover:-translate-y-0.5 hover:shadow-[0_8px_30px_-8px_rgba(238,120,28,.5)];
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: var(--font-body);
+  background: var(--ink);
+  color: var(--white);
+  line-height: 1.55;
+  font-size: 16px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@keyframes navDrop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav {
+  animation: navDrop 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
