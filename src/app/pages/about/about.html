@@ -8,7 +8,7 @@
       <h1
         class="font-display font-extrabold font-stretch-110% leading-[0.92] tracking-[-0.02em] uppercase relative z-2 text-[clamp(30px,9vw,80px)] mt-4.5"
       >
-        Indigenous.<br />Industrial.<br /><span class="signal-text">Indispensable.</span>
+        Indigenous.<br />Industrial.<br /><span class="text-signal">Indispensable.</span>
       </h1>
 
       <p
@@ -24,7 +24,9 @@
 
   <!-- STORY -->
   <section class="py-[clamp(72px,11vw,150px)] bg-(--basalt)">
-    <div class="w-[90%] max-w-7xl mx-auto split">
+    <div
+      class="w-[90%] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[clamp(36px,6vw,90px)] items-center"
+    >
       <div class="reveal-left in relative aspect-4/5 border border-(--steel-line) overflow-hidden">
         <div class="absolute inset-0 z-0" aria-hidden="true">
           <img
@@ -114,7 +116,9 @@
         <div class="reveal in bg-ink p-[clamp(28px,3.5vw,44px)]">
           <div class="font-mono text-[13px] tracking-widest text-signal">// 01</div>
 
-          <h3 class="text-[22px] mt-5 mb-3">Vision</h3>
+          <h3 class="font-display font-extrabold uppercase leading-[0.95] text-[22px] mt-5 mb-3">
+            Vision
+          </h3>
           <p class="text-[15px] text-steel-mut">
             To become Nigeria's premier engineering, logistics, construction and project-management
             organisation, achieving extraordinary results for our clients.
@@ -124,7 +128,9 @@
         <div class="reveal d1 in bg-ink p-[clamp(28px,3.5vw,44px)]">
           <div class="font-mono text-[13px] tracking-widest text-signal">// 02</div>
 
-          <h3 class="text-[22px] mt-5 mb-3">Mission</h3>
+          <h3 class="font-display font-extrabold uppercase leading-[0.95] text-[22px] mt-5 mb-3">
+            Mission
+          </h3>
           <p class="text-[15px] text-steel-mut">
             To provide clients with absolute best value while maintaining integrity and building
             long-lasting, multiparty relationships.
@@ -134,7 +140,9 @@
         <div class="reveal d2 in bg-ink p-[clamp(28px,3.5vw,44px)]">
           <div class="font-mono text-[13px] tracking-widest text-signal">// 03</div>
 
-          <h3 class="text-[22px] mt-5 mb-3">HSE Commitment</h3>
+          <h3 class="font-display font-extrabold uppercase leading-[0.95] text-[22px] mt-5 mb-3">
+            HSE Commitment
+          </h3>
           <p class="text-[15px] text-steel-mut">
             Safety isn't expensive; it's priceless. Frequent assessment, trained personnel and
             rigorous lift planning protect people, assets and schedule alike.
@@ -175,7 +183,11 @@
             </div>
 
             <div>
-              <h3 class="text-[21px] tracking-[0.01em] mb-2">{{ item.title }}</h3>
+              <h3
+                class="font-display font-extrabold uppercase leading-[0.95] text-[21px] tracking-[0.01em] mb-2"
+              >
+                {{ item.title }}
+              </h3>
               <p class="text-[15px] text-(--steel-mut) max-w-140">
                 {{ item.description }}
               </p>
@@ -225,14 +237,8 @@
               {{ item.num }}
             </span>
 
-            <span
-              class="block mb-6 font-mono text-[11px] tracking-[0.18em] uppercase text-foundry-mut"
-            >
-              {{ item.tag }}
-            </span>
-
             <h3
-              class="font-display font-extrabold font-stretch-100% text-[clamp(18px,2.1vw,26px)] tracking-[-0.01em] leading-[1.05] uppercase text-foundry-ink mb-3.5 wrap-break-word max-w-[calc(100%-8px)] whitespace-pre-line"
+              class="font-display font-extrabold font-stretch-100% text-[clamp(16px,2.1vw,20px)] tracking-[-0.01em] leading-[1.05] uppercase text-foundry-ink mb-3.5 wrap-break-word max-w-[calc(100%-8px)] whitespace-pre-line"
             >
               {{ item.title }}
             </h3>
@@ -247,19 +253,29 @@
   </section>
 
   <!-- CTA -->
-  <section class="section-pad cta band-ink">
+  <section class="py-[clamp(72px,11vw,150px)] bg-ink cta">
     <div class="cta-glow" aria-hidden="true"></div>
-    <div class="wrap cta-inner stagger in">
-      <span class="eyebrow" style="justify-content: center">Work with Magma</span>
-      <h2 class="display" style="margin-top: 18px">Let's move<br />something <em>heavy.</em></h2>
-      <p>Tell us about the scope. We'll bring the plan, the equipment and the crew.</p>
-      <div class="cta-actions">
-        <a href="#contact" data-page="contact" class="btn btn-signal"
-          >Get a quote <span class="arr">→</span></a
-        >
-        <a href="#gallery" data-page="gallery" class="btn btn-ghost"
-          >See our work <span class="arr">→</span></a
-        >
+    <div class="w-[90%] max-w-220 mx-auto relative z-2 text-center stagger in">
+      <span class="eyebrow justify-center">Work with Magma</span>
+
+      <h2
+        class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.02em] uppercase text-[clamp(38px,7vw,104px)] mt-4.5"
+      >
+        Let's move<br />
+        something <em class="not-italic text-signal">heavy.</em>
+      </h2>
+
+      <p class="text-concrete max-w-135 mx-auto mt-6 mb-9">
+        Tell us about the scope. We'll bring the plan, the equipment and the crew.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3.5">
+        <a href="#contact" data-page="contact" class="btn btn-signal">
+          Get a quote <span class="arr">→</span>
+        </a>
+        <a routerLink="/projects" class="btn btn-ghost">
+          See our work <span class="arr">→</span>
+        </a>
       </div>
     </div>
   </section>

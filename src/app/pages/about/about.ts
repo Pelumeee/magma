@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface TimelineItem {
   year: string;
@@ -15,10 +16,10 @@ interface SectorItem {
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './about.html',
-  styleUrl: './about.css',
 })
+
 export class About {
   timeline: TimelineItem[] = [
     {
@@ -52,6 +53,7 @@ export class About {
         'Trusted on refinery rehabilitation, plant maintenance, drilling support and naval logistics across the country.',
     },
   ];
+  
   sectors: SectorItem[] = [
     {
       num: '01',
@@ -70,9 +72,9 @@ export class About {
     {
       num: '03',
       tag: '// Sector',
-      title: 'Power',
+      title: 'Energy & Power',
       description:
-        'Plant erection, turbine installation and heavy-equipment positioning for energy assets.',
+        'Technical support for power and energy projects, including plant erection, turbine installation, and heavy equipment positioning.',
     },
     {
       num: '04',
@@ -80,6 +82,34 @@ export class About {
       title: 'Marine',
       description:
         "Vessel maintenance, tug-and-barge spreads and defence logistics along Nigeria's coastline.",
+    },
+    {
+      num: '05',
+      tag: '// Sector',
+      title: 'Petrochemical',
+      description:
+        'Safe, efficient support for plant construction, shutdowns, maintenance operations and equipment installation.',
+    },
+    {
+      num: '06',
+      tag: '// Sector',
+      title: 'Manufacturing',
+      description:
+        'Reliable lifting, transport and project support for factory installation, plant expansion, maintenance and machinery relocation.',
+    },
+    {
+      num: '07',
+      tag: '// Sector',
+      title: 'Aviation',
+      description:
+        'Specialised lifting, transport and operational support for airport, airside and aviation infrastructure projects.',
+    },
+    {
+      num: '08',
+      tag: '// Sector',
+      title: 'Infrastructure',
+      description:
+        'Execution support for bridges, roads, utilities, ports, and other large-scale infrastructure developments.',
     },
   ];
 }
