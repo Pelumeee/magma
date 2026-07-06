@@ -26,8 +26,9 @@ export class Navbar {
   links = [
     { label: 'Home', route: '/' },
     { label: 'About', route: '/about' },
-    { label: 'Gallery', route: '/gallery' },
-    { label: 'Insights', route: '/insights' },
+    { label: 'Projects', route: '/projects' },
+    { label: 'Equipments', route: '/equipments' },
+    // { label: 'Insights', route: '/insights' },
     { label: 'Contact', route: '/contact' },
   ];
 }

@@ -1,46 +1,78 @@
-<footer class="foot">
-  <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <img
-          src="logo.png"
-          alt="Magma Technical Services Nigeria Ltd"
-          style="height: 52px; width: auto; display: block; margin-bottom: 18px"
-        />
-        <p>
-          Magma Technical Services Nigeria Ltd — heavy-lift, marine logistics and engineering for
-          the sectors that move the country.
-        </p>
+<footer class="bg-ink">
+  <div class="w-[90%] max-w-7xl mx-auto pt-[clamp(60px,8vw,100px)] flex flex-col gap-12">
+    <div
+      class="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] grid-cols-1 gap-10 pb-14 border-b border-(--steel-line)"
+    >
+      <div class="">
+        <img src="logo.png" alt="Magma Technical Services Nigeria Ltd" class="h-16 w-auto mb-4.5" />
+        <p class="font-bold">We Lift, We Move, We Deliver.</p>
       </div>
-      <div class="foot-col">
+
+      <div class="">
         <h4>Company</h4>
-        <a href="#about" data-page="about">About</a>
-        <a href="#gallery" data-page="gallery">Gallery</a>
-        <a href="#blog" data-page="blog">Insights</a>
-        <a href="#contact" data-page="contact">Contact</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/gallery">Gallery</a>
+        <a routerLink="/insights">Insights</a>
+        <a routerLink="/contact">Contact</a>
       </div>
-      <div class="foot-col">
+      <div class="">
         <h4>Services</h4>
-        <a href="#services" data-page="home" data-scroll="services">Crane Hire</a>
-        <a href="#services" data-page="home" data-scroll="services">Marine Logistics</a>
-        <a href="#services" data-page="home" data-scroll="services">Rigging &amp; Lifting</a>
-        <a href="#services" data-page="home" data-scroll="services">Engineering &amp; EPC</a>
+        <a routerLink="/services#engineered-heavy-lift">Engineered Heavy Lift</a>
+        <a routerLink="/services#crane-hire">Crane Hire</a>
+        <a routerLink="/services#heavy-transport">Heavy Transport</a>
+        <a routerLink="/services#plant-support">Plant Support</a>
+        <a routerLink="/services#rigging-installation">Rigging &amp; Installation</a>
+        <a routerLink="/services#project-engineering-lift-planning"
+          >Project Engineering &amp; Lift Planning</a
+        >
       </div>
-      <div class="foot-col">
+      <div class="">
         <h4>Reach us</h4>
         <a
           href="https://maps.google.com/?q=Trans+Amadi+Port+Harcourt"
           target="_blank"
           rel="noopener"
-          >Plot 217, Trans Amadi, Port Harcourt</a
+          class="flex! items-start gap-2"
         >
-        <a href="tel:09065033446">0906 503 3446</a>
-        <a href="mailto:info@magmatechng.com">info@magmatechng.com</a>
+          <i class="ti ti-map-pin mt-0.5! shrink-0"></i>
+          <span>
+            Plot 217 Trans-Amadi Industrial Layout, off Ordinance Junction, Port Harcourt, Rivers
+            State
+          </span>
+        </a>
+        <a href="tel:+2349065033446" class="flex! items-center gap-2">
+          <i class="ti ti-phone -mt-0.5!"></i>
+          <span>+234 906 503 3446</span>
+        </a>
+
+        <a href="mailto:info@magmatechng.com" class="flex! items-center gap-2">
+          <i class="ti ti-mail -mt-0.5!"></i>
+          <span>info@magmatechng.com</span>
+        </a>
+
+        <a
+          href="https://wa.me/2349065033446"
+          class="flex! items-center gap-2"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="ti ti-brand-whatsapp -mt-0.5!"></i>
+          <span>+234 906 503 3446</span>
+        </a>
       </div>
     </div>
-    <div class="foot-word text-center" aria-hidden="true">MAGMA</div>
-    <div class="foot-bottom">
-      <span class="spec">© <span data-year></span> Magma Technical Services Nigeria Ltd</span>
+    <div
+      class="font-display font-extrabold uppercase font-stretch:125% text-[clamp(56px,17vw,250px)] leading-[0.82] tracking-[-0.01em] text-(--basalt-2) select-none text-center"
+      aria-hidden="true"
+    >
+      MAGMA
+    </div>
+    <div
+      class="flex items-center justify-between text-[13px] text-(--steel) py-6 flex-col md:flex-row gap-3"
+    >
+      <span class="spec"
+        >© <span>{{ currentYear }}</span> Magma Technical Services Nigeria Ltd</span
+      >
       <span class="spec">LAT 4.8156° N · RIVERS STATE · NG</span>
     </div>
   </div>

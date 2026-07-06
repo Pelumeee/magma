@@ -1,14 +1,21 @@
-<main class="page active" id="page-gallery" data-page="gallery">
-  <header class="page-hero band-ink">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="wrap">
-      <span class="eyebrow crumb reveal in">Gallery</span>
-      <h1 class="display reveal in" style="margin-top: 18px">
-        The <span class="signal-text">work.</span>
+<main class="page active">
+  <header class="relative overflow-hidden pt-[clamp(150px,18vw,230px)] pb-[clamp(60px,8vw,110px)]">
+    <div class="hero-glow opacity-[0.85]" aria-hidden="true"></div>
+
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <span class="eyebrow reveal in relative z-2">Projects</span>
+
+      <h1
+        class="font-display font-extrabold font-stretch-110% leading-[0.92] tracking-[-0.02em] uppercase relative z-2 text-[clamp(30px,9vw,80px)] mt-4.5"
+      >
+        Our <span class="signal-text">Work</span>
       </h1>
-      <p class="lede reveal in">
+
+      <p
+        class="relative z-2 max-w-155 mt-6 reveal in text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
+      >
         Selected projects across refinery rehabilitation, plant maintenance, drilling support and
-        marine logistics — delivered to spec and to a zero-harm standard.
+        marine logistics, delivered to spec and to a zero-harm standard.
       </p>
     </div>
   </header>
@@ -16,15 +23,15 @@
   <div class="hazard" aria-hidden="true"></div>
 
   <section class="section-pad band-basalt">
-    <div class="wrap">
-      <div class="filterbar reveal in">
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <!-- <div class="filterbar reveal in">
         <button class="chip active" data-filter="all">All work</button>
         <button class="chip" data-filter="oilgas">Oil &amp; Gas</button>
         <button class="chip" data-filter="marine">Marine</button>
         <button class="chip" data-filter="construction">Construction</button>
         <button class="chip" data-filter="power">Power</button>
         <button class="chip" data-filter="equipment">Equipment</button>
-      </div>
+      </div> -->
 
       <div class="gal-grid stagger in">
         <article class="gcard w8 reveal" data-cat="oilgas">
@@ -210,21 +217,31 @@
     </div>
   </section>
 
-  <section class="section-pad cta band-ink">
+  <section class="relative py-[clamp(72px,11vw,150px)] bg-(--ink) cta">
     <div class="cta-glow" aria-hidden="true"></div>
-    <div class="wrap cta-inner stagger in">
-      <span class="eyebrow" style="justify-content: center">Your project next</span>
-      <h2 class="display" style="margin-top: 18px">Put us on your<br />critical <em>path.</em></h2>
-      <p>
-        Refinery, plant, drilling or marine — if the load is heavy and the schedule is tight, we
-        want to hear about it.
+
+    <div class="w-[90%] mx-auto px-(--gut) stagger in relative z-2 text-center max-w-220">
+      <span class="eyebrow justify-center"> Your next project </span>
+
+      <h2
+        class="font-display font-extrabold leading-[0.92] uppercase mt-4.5 text-[clamp(38px,7vw,104px)] font-stretch-108% tracking-[-0.02em]"
+      >
+        Need a <em class="not-italic text-signal">Crane?</em>
+      </h2>
+
+      <p class="text-concrete max-w-135 mx-auto mt-6 mb-9">
+        Talk to our engineering team before you mobilise. <br />
+        We support crane selection, lift planning, rigging, crew deployment, and equipment
+        procurement for complex site conditions.
       </p>
-      <div class="cta-actions">
-        <a href="contact" data-page="contact" class="btn btn-signal"
-          >Get a quote <span class="arr">→</span></a
-        ><a href="about" data-page="about" class="btn btn-ghost"
-          >About Magma <span class="arr">→</span></a
-        >
+
+      <div class="flex justify-center flex-wrap gap-3.5">
+        <a RouterLink="/contact" class="btn btn-signal cursor-pointer">
+          Get a quote <span class="arr">→</span>
+        </a>
+        <a RouterLink="/about" class="btn btn-ghost cursor-pointer">
+          About Magma <span class="arr">→</span>
+        </a>
       </div>
     </div>
   </section>

@@ -1,14 +1,21 @@
+<main class="">
+  <header class="relative overflow-hidden pt-[clamp(150px,18vw,230px)] pb-[clamp(60px,8vw,110px)]">
+    <div class="hero-glow opacity-[0.85]" aria-hidden="true"></div>
 
-<main class="page active" id="page-contact" data-page="contact">
-  <header class="page-hero band-ink">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="wrap">
-      <span class="eyebrow crumb reveal in">Contact</span>
-      <h1 class="display reveal in" style="margin-top: 18px">
-        Let's work<br /><span class="signal-text">together.</span>
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <span class="eyebrow reveal in relative z-2">Contact</span>
+
+      <h1
+        class="font-display font-extrabold font-stretch-110% leading-[0.92] tracking-[-0.02em] uppercase relative z-2 text-[clamp(30px,9vw,80px)] mt-4.5"
+      >
+        Let's work<br />
+        <span class="signal-text">together.</span>
       </h1>
-      <p class="lede reveal in">
-        Tell us about the scope. We'll come back with a plan, the right equipment and a price —
+
+      <p
+        class="relative z-2 max-w-155 mt-6 reveal in text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
+      >
+        Tell us about the scope. We'll come back with a plan, the right equipment and a price,
         within one business day.
       </p>
     </div>
@@ -16,54 +23,61 @@
 
   <div class="hazard" aria-hidden="true"></div>
 
-  <section class="section-pad band-basalt">
-    <div class="wrap contact-grid">
-      <div class="contact-info reveal-left in">
-        <div class="info-row">
-          <div class="il">Location</div>
-          <div class="iv sm">
-            Plot 217, Trans Amadi Industrial Layout,<br />Phase II, Port Harcourt, Rivers State
+  <section class="py-[clamp(72px,11vw,150px)] bg-(--basalt)">
+    <div
+      class="w-[90%] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-[clamp(40px,6vw,90px)] items-start"
+    >
+      <div class="reveal-left in">
+        <div class="py-5 border-t border-(--steel-line)">
+          <div class="font-mono text-[11px] tracking-[0.16em] uppercase text-signal mb-2">
+            Location
+          </div>
+          <div class="">
+            Plot 217, Trans Amadi Industrial Layout,<br />off Ordinance Junction, Port Harcourt,
+            Rivers State
           </div>
         </div>
-        <div class="info-row">
-          <div class="il">Phone</div>
-          <div class="iv"><a href="tel:09065033446">0906 503 3446</a></div>
+        <div class="py-5 border-t border-(--steel-line)">
+          <div class="font-mono text-[11px] tracking-[0.16em] uppercase text-signal mb-2">
+            Phone
+          </div>
+          <div class=""><a href="tel:09065033446">+234 906 503 3446</a></div>
         </div>
-        <div class="info-row">
-          <div class="il">Email</div>
-          <div class="iv"><a href="mailto:info@magmatechng.com">info@magmatechng.com</a></div>
+        <div class="py-5 border-t border-(--steel-line)">
+          <div class="font-mono text-[11px] tracking-[0.16em] uppercase text-signal mb-2">
+            Email
+          </div>
+          <div class=""><a href="mailto:info@magmatechng.com">info@magmatechng.com</a></div>
         </div>
-        <div class="info-row">
-          <div class="il">Hours</div>
-          <div class="iv sm">Mon–Sat · Operations 24/7</div>
+        <div class="py-5 border-y border-(--steel-line)">
+          <div class="font-mono text-[11px] tracking-[0.16em] uppercase text-signal mb-2">
+            Hours
+          </div>
+          <div class="">Mon–Sat · Operations 24/7</div>
         </div>
-        <div
-          style="
-            margin-top: 34px;
-            position: relative;
-            aspect-ratio: 16/10;
-            border: 1px solid var(--steel-line);
-            overflow: hidden;
-          "
-        >
-          <div class="photo-fill" aria-hidden="true">
+        <div class="mt-8.5 relative aspect-16/10 border border-(--steel-line) overflow-hidden">
+          <div class="absolute inset-0 z-0" aria-hidden="true">
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+              src="about.jpeg"
               alt="Operations"
               loading="lazy"
+              class="w-full h-full object-cover object-bottom"
             />
           </div>
+
           <div
-            style="
-              position: absolute;
-              inset: 0;
-              background: linear-gradient(180deg, transparent, rgba(10, 11, 13, 0.65));
-              z-index: 1;
-            "
+            class="absolute inset-0 z-1 bg-[linear-gradient(180deg,transparent,rgba(10,11,13,0.75))]"
           ></div>
-          <div style="position: absolute; left: 0; bottom: 0; padding: 20px; z-index: 2">
-            <div class="spec" style="color: var(--signal)">HQ · RIVERS STATE</div>
-            <div class="display" style="font-size: 24px; margin-top: 6px">Trans Amadi</div>
+
+          <div class="absolute left-0 bottom-0 p-5 z-2">
+            <div class="font-mono text-xs uppercase tracking-[0.06rem] text-(--signal)">
+              HQ · RIVERS STATE
+            </div>
+            <div
+              class="font-display font-extrabold font-stretch-115% leading-[0.92] tracking-[-0.01em] uppercase text-2xl mt-1.5"
+            >
+              Trans Amadi
+            </div>
           </div>
         </div>
       </div>
@@ -71,27 +85,55 @@
       <div class="reveal-right in">
         <span class="eyebrow">Request a quote</span>
         <h2
-          class="display"
-          style="font-size: clamp(28px, 3.6vw, 46px); margin: 18px 0 30px; letter-spacing: -0.01em"
+          class="font-display font-extrabold font-stretch-115% leading-[0.92] tracking-[-0.01em] uppercase text-[clamp(28px,3.6vw,46px)] mt-4.5 mb-7.5"
         >
-          Start your <em class="signal-text" style="font-style: normal">enquiry</em>
+          How can we <em class="text-signal not-italic">help</em>
         </h2>
-        <form class="form" data-form novalidate>
-          <div class="field">
-            <label for="name">Full name</label
-            ><input id="name" type="text" placeholder="Your name" required />
+        <form class="grid grid-cols-2 gap-4" data-form novalidate>
+          <div class="flex flex-col gap-2">
+            <label
+              for="name"
+              class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)"
+            >
+              Full name
+            </label>
+            <input id="name" type="text" placeholder="Your name" required class="form-control" />
           </div>
-          <div class="field">
-            <label for="email">Email</label
-            ><input id="email" type="email" placeholder="you@company.com" required />
+
+          <div class="flex flex-col gap-2">
+            <label
+              for="email"
+              class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)"
+            >
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="you@company.com"
+              required
+              class="form-control"
+            />
           </div>
-          <div class="field full">
-            <label for="company">Company / organisation</label
-            ><input id="company" type="text" placeholder="Company name" />
+
+          <div class="col-span-2 flex flex-col gap-2">
+            <label
+              for="company"
+              class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)"
+            >
+              Company / organisation
+            </label>
+            <input id="company" type="text" placeholder="Company name" class="form-control" />
           </div>
-          <div class="field full">
-            <label for="service">Service required</label>
-            <select id="service" required>
+
+          <div class="col-span-2 flex flex-col gap-2">
+            <label
+              for="service"
+              class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)"
+            >
+              Service required
+            </label>
+            <select id="service" required class="form-control">
               <option value="" disabled selected>Select a service</option>
               <option>Crane Hire</option>
               <option>Marine Logistics</option>
@@ -102,16 +144,27 @@
               <option>Equipment Hire</option>
             </select>
           </div>
-          <div class="field full">
-            <label for="msg">Describe your project</label
-            ><textarea
+
+          <div class="col-span-2 flex flex-col gap-2">
+            <label
+              for="msg"
+              class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)"
+            >
+              Describe your project
+            </label>
+            <textarea
               id="msg"
               placeholder="Scope, location, timeline, load details…"
               required
+              class="form-control min-h-32.5 resize-y"
             ></textarea>
           </div>
-          <div class="actions">
-            <span class="form-note">// We respond within one business day.</span>
+
+          <div class="col-span-2 flex items-center justify-between gap-4 flex-wrap mt-1.5">
+            <span class="font-mono text-[11px] tracking-[0.04em] text-(--steel-mut)">
+              // We respond within one business day.
+            </span>
+
             <button type="submit" class="btn btn-signal" data-submit>
               Send enquiry <span class="arr">→</span>
             </button>
@@ -121,30 +174,50 @@
     </div>
   </section>
 
-  <section class="band-light" style="padding: clamp(40px, 6vw, 72px) 0">
+  <section class="bg-foundry text-foundry-ink py-[clamp(40px,6vw,72px)]">
     <div
-      class="wrap"
-      style="
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1px;
-        background: var(--foundry-line);
-        border: 1px solid var(--foundry-line);
-      "
+      class="w-[90%] max-w-7xl mx-auto px-[clamp(20px,5vw,64px)] grid grid-cols-1 md:grid-cols-3 gap-px bg-foundry-line border border-foundry-line"
     >
-      <div class="stat reveal-scale in" style="text-align: left">
-        <div class="sv" style="font-size: clamp(28px, 3.4vw, 46px)">24/7</div>
-        <div class="sl">Operations &amp; marine support</div>
-      </div>
-      <div class="stat reveal-scale d1 in" style="text-align: left">
-        <div class="sv" style="font-size: clamp(28px, 3.4vw, 46px)">
-          <span class="signal-text">100T</span>
+      <div
+        class="reveal-scale in text-left bg-foundry px-[clamp(20px,2.5vw,36px)] py-[clamp(28px,4vw,52px)]"
+      >
+        <div
+          class="font-display font-extrabold font-stretch-110% text-[clamp(40px,6vw,84px)] leading-[0.9] text-foundry-ink"
+        >
+          24/7
         </div>
-        <div class="sl">Max lift capacity on deck</div>
+
+        <div class="font-mono text-xs tracking-widest uppercase text-foundry-mut mt-3.5 max-w-60">
+          Operations &amp; marine support
+        </div>
       </div>
-      <div class="stat reveal-scale d2 in" style="text-align: left">
-        <div class="sv" style="font-size: clamp(28px, 3.4vw, 46px)">1 day</div>
-        <div class="sl">Typical response on enquiries</div>
+
+      <div
+        class="reveal-scale d1 in text-left bg-foundry px-[clamp(20px,2.5vw,36px)] py-[clamp(28px,4vw,52px)]"
+      >
+        <div
+          class="font-display font-extrabold font-stretch-110% text-[clamp(40px,6vw,84px)] leading-[0.9] text-foundry-ink"
+        >
+          <span class="text-(--signal-deep)">100T</span>
+        </div>
+
+        <div class="font-mono text-xs tracking-widest uppercase text-foundry-mut mt-3.5 max-w-60">
+          Max lift capacity on deck
+        </div>
+      </div>
+
+      <div
+        class="reveal-scale d2 in text-left bg-foundry px-[clamp(20px,2.5vw,36px)] py-[clamp(28px,4vw,52px)]"
+      >
+        <div
+          class="font-display font-extrabold font-stretch-110% text-[clamp(40px,6vw,84px)] leading-[0.9] text-foundry-ink"
+        >
+          1 day
+        </div>
+
+        <div class="font-mono text-xs tracking-widest uppercase text-foundry-mut mt-3.5 max-w-60">
+          Typical response on enquiries
+        </div>
       </div>
     </div>
   </section>

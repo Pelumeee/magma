@@ -5,7 +5,6 @@ import { AnimationsService } from '../../core/services/animations.service';
   selector: 'app-contact',
   imports: [],
   templateUrl: './contact.html',
-  styleUrl: './contact.css',
 })
 export class Contact implements AfterViewInit {
   // animation = inject(AnimationsService);

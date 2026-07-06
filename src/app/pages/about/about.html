@@ -1,12 +1,19 @@
-<main class="page active" id="page-about" data-page="about">
-  <header class="page-hero band-ink">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="wrap">
-      <span class="eyebrow crumb reveal in">About Magma</span>
-      <h1 class="display reveal in" style="margin-top: 18px">
+<main class="page active">
+  <header class="relative overflow-hidden pt-[clamp(150px,18vw,230px)] pb-[clamp(60px,8vw,110px)]">
+    <div class="hero-glow opacity-[0.85]" aria-hidden="true"></div>
+
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <span class="eyebrow reveal in relative z-2">About Magma</span>
+
+      <h1
+        class="font-display font-extrabold font-stretch-110% leading-[0.92] tracking-[-0.02em] uppercase relative z-2 text-[clamp(30px,9vw,80px)] mt-4.5"
+      >
         Indigenous.<br />Industrial.<br /><span class="signal-text">Indispensable.</span>
       </h1>
-      <p class="lede reveal in">
+
+      <p
+        class="relative z-2 max-w-155 mt-6 reveal in text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
+      >
         An indigenous service firm committed to delivering quality heavy-lift and logistics
         solutions to the sectors that keep Nigeria running.
       </p>
@@ -16,98 +23,120 @@
   <div class="hazard" aria-hidden="true"></div>
 
   <!-- STORY -->
-  <section class="section-pad band-basalt">
-    <div class="wrap split">
-      <div
-        class="reveal-left in"
-        style="
-          position: relative;
-          aspect-ratio: 4/5;
-          border: 1px solid var(--steel-line);
-          overflow: hidden;
-        "
-      >
-        <div class="photo-fill" aria-hidden="true">
+  <section class="py-[clamp(72px,11vw,150px)] bg-(--basalt)">
+    <div class="w-[90%] max-w-7xl mx-auto split">
+      <div class="reveal-left in relative aspect-4/5 border border-(--steel-line) overflow-hidden">
+        <div class="absolute inset-0 z-0" aria-hidden="true">
           <img
-            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80"
+            src="about.jpeg"
             alt="Industrial engineering site"
             loading="lazy"
+            class="w-full h-full object-cover object-center"
           />
         </div>
+
         <div
-          style="
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent, rgba(10, 11, 13, 0.72));
-            z-index: 1;
-          "
+          class="absolute inset-0 z-1 bg-[linear-gradient(180deg,transparent,rgba(10,11,13,0.80))]"
         ></div>
-        <div style="position: absolute; left: 0; bottom: 0; padding: 28px; z-index: 2">
-          <div class="spec" style="color: var(--signal)">EST. 2016</div>
-          <div class="display" style="font-size: 34px; margin-top: 8px">Port Harcourt</div>
+
+        <div class="absolute left-0 bottom-0 p-7 z-2">
+          <div class="font-mono text-[11px] tracking-[0.16em] uppercase text-signal">EST. 2016</div>
+
+          <div
+            class="font-display font-extrabold font-stretch-115% leading-[0.92] tracking-[-0.01em] uppercase text-[34px] mt-2"
+          >
+            Port Harcourt
+          </div>
         </div>
       </div>
       <div class="reveal-right in">
         <span class="eyebrow">Who we are</span>
+
         <h2
-          class="display"
-          style="font-size: clamp(32px, 4.6vw, 58px); margin: 20px 0 22px; letter-spacing: -0.015em"
+          class="font-display font-extrabold font-stretch-115% leading-[0.92] tracking-[-0.015em] uppercase text-[clamp(32px,4.6vw,58px)] mt-5 mb-5.5"
         >
-          From planning to <em class="signal-text" style="font-style: normal">post-completion</em>
+          From planning to
+          <em class="signal-text not-italic">completion</em>
         </h2>
-        <p class="lede" style="margin-bottom: 22px">
-          Magma Technical Services Nigeria Ltd was founded to close a hard gap: world-class
-          heavy-lift capability, owned and run by Nigerians, for Nigerian conditions.
+
+        <p class="text-[clamp(16px,2.1vw,20px)] leading-normal text-concrete font-normal mb-5.5">
+          Magma Technical Services Nigeria Ltd is a trusted provider of engineered lifting, crane
+          rental, heavy transport, and specialised project support solutions.
         </p>
-        <p style="color: var(--steel-mut); margin-bottom: 18px">
-          We bring crane hire, marine logistics, rigging, land transport, engineering and
-          procurement under one accountable roof — so clients in Oil&nbsp;&amp;&nbsp;Gas,
-          Construction and Power don't have to stitch together a dozen contractors on the critical
-          path.
+
+        <p class="text-steel-mut mb-4.5">
+          From planning to completion, we help clients execute some of their most challenging
+          projects safely, efficiently, and with certainty by combining experienced personnel,
+          modern equipment and meticulous planning to deliver outcomes that matter.
         </p>
-        <p style="color: var(--steel-mut)">
-          From the first lift study through to demobilisation, our crews plan it, rig it, move it
-          and stand it up — to spec, on schedule, and to a zero-harm standard.
+
+        <p class="text-steel-mut mb-4.5">
+          Our capabilities support the full lifecycle of industrial and infrastructure projects,
+          from construction and plant expansion to maintenance shutdowns, drilling operations,
+          equipment installation, commissioning, and emergency response.
+        </p>
+
+        <p class="text-steel-mut">
+          Operating across Nigeria, we serve the oil and gas, petrochemical, energy, manufacturing,
+          marine, aviation, and infrastructure sectors with solutions tailored to each project's
+          unique technical and operational requirements.
         </p>
       </div>
     </div>
   </section>
 
   <!-- VALUES -->
-  <section class="section-pad band-ink">
-    <div class="wrap">
-      <div class="sec-head">
+  <section class="py-[clamp(72px,11vw,150px)] bg-ink">
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-end mb-[clamp(40px,6vw,72px)]"
+      >
         <div>
           <span class="eyebrow">What drives us</span>
-          <h2>The <em>standard</em><br />we hold</h2>
+
+          <h2
+            class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.015em] uppercase text-[clamp(30px,5.5vw,70px)] mt-4.5"
+          >
+            The <br />
+            <em class="not-italic text-signal">standard</em><br />
+            we hold
+          </h2>
         </div>
-        <p class="side">
-          Three commitments shape every decision — from how we price a job to how we close out a
+
+        <p class="text-concrete">
+          Three commitments shape every decision, from how we price a job to how we close out a
           site.
         </p>
       </div>
-      <div class="values">
-        <div class="value reveal in">
-          <div class="vn">// 01</div>
-          <h3>Vision</h3>
-          <p>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-px bg-(--steel-line) border border-(--steel-line)"
+      >
+        <div class="reveal in bg-ink p-[clamp(28px,3.5vw,44px)]">
+          <div class="font-mono text-[13px] tracking-widest text-signal">// 01</div>
+
+          <h3 class="text-[22px] mt-5 mb-3">Vision</h3>
+          <p class="text-[15px] text-steel-mut">
             To become Nigeria's premier engineering, logistics, construction and project-management
-            organisation — achieving extraordinary results for our clients.
+            organisation, achieving extraordinary results for our clients.
           </p>
         </div>
-        <div class="value reveal d1 in">
-          <div class="vn">// 02</div>
-          <h3>Mission</h3>
-          <p>
+
+        <div class="reveal d1 in bg-ink p-[clamp(28px,3.5vw,44px)]">
+          <div class="font-mono text-[13px] tracking-widest text-signal">// 02</div>
+
+          <h3 class="text-[22px] mt-5 mb-3">Mission</h3>
+          <p class="text-[15px] text-steel-mut">
             To provide clients with absolute best value while maintaining integrity and building
             long-lasting, multiparty relationships.
           </p>
         </div>
-        <div class="value reveal d2 in">
-          <div class="vn">// 03</div>
-          <h3>HSE Commitment</h3>
-          <p>
-            Safety isn't expensive — it's priceless. Frequent assessment, trained personnel and
+
+        <div class="reveal d2 in bg-ink p-[clamp(28px,3.5vw,44px)]">
+          <div class="font-mono text-[13px] tracking-widest text-signal">// 03</div>
+
+          <h3 class="text-[22px] mt-5 mb-3">HSE Commitment</h3>
+          <p class="text-[15px] text-steel-mut">
+            Safety isn't expensive; it's priceless. Frequent assessment, trained personnel and
             rigorous lift planning protect people, assets and schedule alike.
           </p>
         </div>
@@ -116,117 +145,103 @@
   </section>
 
   <!-- TIMELINE -->
-  <section class="section-pad band-basalt">
-    <div class="wrap">
-      <div class="sec-head">
+  <section class="py-[clamp(72px,11vw,150px)] bg-(--basalt)">
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-end mb-[clamp(38px,6vw,70px)]"
+      >
         <div>
           <span class="eyebrow">Track record</span>
-          <h2>Years on the <em>iron</em></h2>
+          <h2
+            class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.015em] uppercase text-[clamp(34px,5.5vw,76px)] mt-4.5"
+          >
+            Years on the <em class="not-italic text-signal">iron</em>
+          </h2>
         </div>
-        <p class="side">
+
+        <p class="text-concrete">
           A short history of building heavy-lift capability across Nigeria's most demanding sites.
         </p>
       </div>
-      <div class="timeline reveal in">
-        <div class="tl-row">
-          <div class="tl-year">2016</div>
-          <div class="tl-c">
-            <h3>Founded in Port Harcourt</h3>
-            <p>
-              Magma is established as an indigenous heavy-lift and logistics firm, headquartered in
-              the Trans Amadi industrial layout, Rivers State.
-            </p>
+      <div class="reveal in border-l-2 border-(--steel-line)">
+        @for (item of timeline; track item.year) {
+          <div
+            class="relative grid grid-cols-[130px_1fr] gap-7 py-6.5 pl-8.5 border-b border-(--steel-line)"
+          >
+            <span class="absolute -left-1.75 top-8.5 w-3 h-3 rounded-full bg-signal"></span>
+
+            <div class="font-display font-extrabold font-stretch-110% text-[28px] text-signal">
+              {{ item.year }}
+            </div>
+
+            <div>
+              <h3 class="text-[21px] tracking-[0.01em] mb-2">{{ item.title }}</h3>
+              <p class="text-[15px] text-(--steel-mut) max-w-140">
+                {{ item.description }}
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-year">2018</div>
-          <div class="tl-c">
-            <h3>Marine spread online</h3>
-            <p>
-              Tugboats, barges and landing craft join the fleet, extending operations across coastal
-              and inland waterways with 24/7 support.
-            </p>
-          </div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-year">2020</div>
-          <div class="tl-c">
-            <h3>100T lift capacity</h3>
-            <p>
-              The Link-Belt RTC-80100 rough-terrain crane brings 100-tonne lift capability to
-              industrial, oil &amp; gas and construction sites.
-            </p>
-          </div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-year">2022</div>
-          <div class="tl-c">
-            <h3>EPC &amp; engineering</h3>
-            <p>
-              Service lines expand into FEED, mechanical, electrical, instrumentation and full EPC
-              delivery for industrial assets.
-            </p>
-          </div>
-        </div>
-        <div class="tl-row">
-          <div class="tl-year">Today</div>
-          <div class="tl-c">
-            <h3>On the critical path</h3>
-            <p>
-              Trusted on refinery rehabilitation, plant maintenance, drilling support and naval
-              logistics across the country.
-            </p>
-          </div>
-        </div>
+        }
       </div>
     </div>
   </section>
 
   <!-- SECTORS -->
-  <section class="section-pad band-light">
-    <div class="wrap">
-      <div class="sec-head">
+  <section class="py-[clamp(72px,11vw,150px)] bg-foundry text-foundry-ink">
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-end mb-[clamp(40px,6vw,72px)]"
+      >
         <div>
           <span class="eyebrow muted">Where we work</span>
-          <h2>Sectors we<br />carry</h2>
+
+          <h2
+            class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.015em] uppercase text-[clamp(34px,5.5vw,70px)] mt-4.5"
+          >
+            Sectors we<br />
+            carry
+          </h2>
         </div>
-        <p class="side">
+
+        <p class="text-(--foundry-mut)">
           Heavy-industrial work where the load is large, the tolerance is tight and the downtime is
           expensive.
         </p>
       </div>
-      <div class="sector-grid stagger in">
-        <div class="sector-card">
-          <span class="sc-tag">01</span>
-          <span class="sc-num">// Primary sector</span>
-          <h3>Oil &amp;<br />Gas</h3>
-          <p>
-            Refinery rehabilitation, drilling support and offshore logistics across the Niger Delta.
-          </p>
-        </div>
-        <div class="sector-card">
-          <span class="sc-tag">02</span>
-          <span class="sc-num">// Primary sector</span>
-          <h3>Construction</h3>
-          <p>Structural heavy lifts, site mobilisation and civil engineering support nationwide.</p>
-        </div>
-        <div class="sector-card">
-          <span class="sc-tag">03</span>
-          <span class="sc-num">// Sector</span>
-          <h3>Power</h3>
-          <p>
-            Plant erection, turbine installation and heavy-equipment positioning for energy assets.
-          </p>
-        </div>
-        <div class="sector-card">
-          <span class="sc-tag">04</span>
-          <span class="sc-num">// Sector</span>
-          <h3>Marine</h3>
-          <p>
-            Vessel maintenance, tug-and-barge spreads and defence logistics along Nigeria's
-            coastline.
-          </p>
-        </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px bg-(--foundry-line) border border-(--foundry-line) stagger in"
+      >
+        @for (item of sectors; track item.num) {
+          <div
+            class="group relative overflow-hidden cursor-default bg-foundry hover:bg-foundry-2 transition-colors duration-300 ease-(--ease) px-[clamp(18px,2.5vw,26px)] py-[clamp(20px,4vw,40px)]"
+          >
+            <span
+              class="absolute bottom-0 left-0 h-1 w-0 bg-signal-deep transition-all duration-500 ease-(--ease) group-hover:w-full"
+            ></span>
+
+            <span
+              class="absolute bottom-[clamp(16px,2vw,28px)] right-[clamp(20px,2.5vw,32px)] font-mono text-[28px] font-extrabold leading-none text-foundry-line transition-colors duration-300 ease-(--ease) group-hover:text-signal-deep"
+            >
+              {{ item.num }}
+            </span>
+
+            <span
+              class="block mb-6 font-mono text-[11px] tracking-[0.18em] uppercase text-foundry-mut"
+            >
+              {{ item.tag }}
+            </span>
+
+            <h3
+              class="font-display font-extrabold font-stretch-100% text-[clamp(18px,2.1vw,26px)] tracking-[-0.01em] leading-[1.05] uppercase text-foundry-ink mb-3.5 wrap-break-word max-w-[calc(100%-8px)] whitespace-pre-line"
+            >
+              {{ item.title }}
+            </h3>
+
+            <p class="text-[14px] leading-[1.55] text-foundry-mut">
+              {{ item.description }}
+            </p>
+          </div>
+        }
       </div>
     </div>
   </section>

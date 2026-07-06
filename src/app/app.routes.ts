@@ -14,12 +14,16 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/insights/insights').then((m) => m.Insights),
   },
   {
-    path: 'gallery',
+    path: 'projects',
     loadComponent: () => import('./pages/gallery/gallery').then((m) => m.Gallery),
   },
   {
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
+  },
+  {
+    path: 'equipments',
+    loadComponent: () => import('./pages/equipments/equipments').then((m) => m.Equipments),
   },
   //   {
   //     path: '**',
