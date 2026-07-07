@@ -49,7 +49,7 @@ export const GALLERY: GalleryItem[] = [
   {
     scope: 'Tower Crane Setup',
     equipment: '110T Motor Crane',
-    location: "100,000-capacity Winner's Chapel auditorium construction site, Lagos",
+    location: "Olam factory site",
     img: '/projects/five.png',
     size: 'lg',
     description:
