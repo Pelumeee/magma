@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { GALLERY, GalleryItem } from '../../shared/data/gallery-data';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,10 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home {
+  plates: GalleryItem[] = GALLERY.slice(0, 4);
+
+  descriptionFor(item: GalleryItem): string {
+    return item.description ?? `${item.equipment} deployed at ${item.location}.`;
+  }
+}

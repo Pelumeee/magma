@@ -297,9 +297,9 @@
           positioned to be a single source for all our clients heavy lift and specialised transport
           needs.
         </p>
-        <a href="#contact" data-page="contact" class="btn btn-signal"
+        <!-- <a href="#contact" data-page="contact" class="btn btn-signal"
           >Browse equipment <span class="arr">→</span></a
-        >
+        > -->
       </div>
       <div class="equip-list reveal-right in">
         <div class="equip-row">
@@ -334,91 +334,26 @@
           <h2>Projects on the <em>critical path</em></h2>
         </div>
         <p class="side">
-          <a href="#gallery" data-page="gallery" class="btn btn-ghost"
+          <a href="/projects" data-page="gallery" class="btn btn-ghost"
             >All projects <span class="arr">→</span></a
           >
         </p>
       </div>
       <div class="plates stagger in">
-        <a class="plate reveal" href="#gallery" data-page="gallery">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1200&q=80"
-              alt="Port Harcourt Refinery"
-              loading="lazy"
-            />
-          </div>
-          <div class="veil"></div>
-          <div class="pmeta">
-            <span class="ptag">Oil &amp; Gas · Rehabilitation</span>
-            <h3>Port Harcourt Refinery</h3>
-            <span class="ploc">Port Harcourt, Nigeria</span>
-            <p class="pdesc">
-              Crane hire and heavy-lift support for the ongoing rehabilitation of one of Nigeria's
-              most critical pieces of energy infrastructure.
-            </p>
-          </div>
-        </a>
-
-        <a class="plate reveal d1 in" href="#gallery" data-page="gallery">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
-              alt="Olam Plant Maintenance"
-              loading="lazy"
-            />
-          </div>
-          <div class="veil"></div>
-          <div class="pmeta">
-            <span class="ptag">Plant Maintenance · Manufacturing</span>
-            <h3>Olam Plant Maintenance</h3>
-            <span class="ploc">Lagos, Nigeria</span>
-            <p class="pdesc">
-              Crane and rigging support for scheduled and unscheduled maintenance at Olam's Lagos
-              facility, ensuring minimal production downtime.
-            </p>
-          </div>
-        </a>
-
-        <a class="plate reveal in" href="#gallery" data-page="gallery">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80"
-              alt="T209 Drilling Support"
-              loading="lazy"
-            />
-          </div>
-          <div class="veil"></div>
-          <div class="pmeta">
-            <span class="ptag">Drilling · Oil &amp; Gas</span>
-            <h3>T209 Drilling Support</h3>
-            <span class="ploc">Bayelsa, Nigeria</span>
-            <p class="pdesc">
-              Integrated lifting, transport and on-site support service for a live drilling
-              programme in the Bayelsa.
-            </p>
-          </div>
-        </a>
-
-        <a class="plate reveal d1 in" href="#gallery" data-page="gallery">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80"
-              alt="Navy Vessel Maintenance"
-              loading="lazy"
-            />
-          </div>
-          <div class="veil"></div>
-          <div class="pmeta">
-            <span class="ptag">Marine · Defence</span>
-            <h3>Navy Vessel Maintenance</h3>
-            <span class="ploc">Port Harcourt, Nigeria</span>
-            <p class="pdesc">
-              Marine logistics and rigging support for naval vessel maintenance across coastal
-              operating bases.
-            </p>
-          </div>
-        </a>
+        @for (item of plates; track item.img; let i = $index) {
+          <a class="plate reveal" [class.d1]="i % 2 === 1" routerLink="/projects">
+            <div class="para-wrap" aria-hidden="true">
+              <img [src]="item.img" [alt]="item.scope" loading="lazy" />
+            </div>
+            <div class="veil"></div>
+            <div class="pmeta">
+              <span class="ptag">{{ item.equipment }}</span>
+              <h3>{{ item.scope }}</h3>
+              <span class="ploc">{{ item.location }}</span>
+              <p class="pdesc">{{ descriptionFor(item) }}</p>
+            </div>
+          </a>
+        }
       </div>
     </div>
   </section>

@@ -33,186 +33,47 @@
         <button class="chip" data-filter="equipment">Equipment</button>
       </div> -->
 
-      <div class="gal-grid stagger in">
-        <article class="gcard w8 reveal" data-cat="oilgas">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1600&q=80"
-              alt="Port Harcourt Refinery"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Oil &amp; Gas · Rehabilitation</div>
-            <div class="gtitle">Port Harcourt Refinery</div>
-          </div>
-        </article>
+      <div
+        class="gal-grid stagger in grid grid-cols-2 md:grid-cols-12 gap-[clamp(12px,1.4vw,18px)] [grid-auto-flow:dense]"
+      >
+        @for (item of gallery; track item.img) {
+          <article
+            class="gcard group relative isolate overflow-hidden border border-steel-line reveal"
+            [ngClass]="[sizeStyles[item.size].span, sizeStyles[item.size].aspect]"
+          >
+            <div
+              class="para-wrap absolute -inset-y-[12%] inset-x-0 z-0 overflow-visible"
+              aria-hidden="true"
+            >
+              <img
+                [src]="item.img"
+                [alt]="item.scope"
+                loading="lazy"
+                class="w-full h-full object-cover object-center block will-change-transform transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+              />
+            </div>
 
-        <article class="gcard w4 reveal d1" data-cat="construction">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
-              alt="100T Structural Lift"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Heavy Lift</div>
-            <div class="gtitle">100T Structural Lift</div>
-          </div>
-        </article>
+            <div
+              class="gveil absolute inset-0 z-[1] bg-[linear-gradient(180deg,transparent_35%,rgba(10,11,13,0.9))] opacity-[0.85] transition-opacity duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-100"
+            ></div>
 
-        <article class="gcard w4 reveal" data-cat="marine">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
-              alt="Navy Vessel Support"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Marine · Defence</div>
-            <div class="gtitle">Navy Vessel Support</div>
-          </div>
-        </article>
-
-        <article class="gcard w4 reveal d1" data-cat="oilgas">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80"
-              alt="T209 Drilling Support"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Drilling · Oil &amp; Gas</div>
-            <div class="gtitle">T209 Drilling Support</div>
-          </div>
-        </article>
-
-        <article class="gcard w4 reveal d2" data-cat="power">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80"
-              alt="Plant Erection"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Power · Install</div>
-            <div class="gtitle">Plant Erection</div>
-          </div>
-        </article>
-
-        <article class="gcard w6 reveal" data-cat="construction">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=80"
-              alt="Lowbed Mobilisation"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Land Transport</div>
-            <div class="gtitle">Lowbed Mobilisation</div>
-          </div>
-        </article>
-
-        <article class="gcard w6 reveal d1" data-cat="oilgas">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80"
-              alt="Olam Plant Maintenance"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Rigging &amp; Lifting</div>
-            <div class="gtitle">Olam Plant Maintenance</div>
-          </div>
-        </article>
-
-        <article class="gcard w4 reveal" data-cat="equipment">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80&crop=entropy"
-              alt="RTC-80100 Crane"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Equipment</div>
-            <div class="gtitle">RTC-80100 Crane</div>
-          </div>
-        </article>
-
-        <article class="gcard w4 reveal d1" data-cat="marine">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80"
-              alt="Tug & Barge Spread"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Marine Logistics</div>
-            <div class="gtitle">Tug &amp; Barge Spread</div>
-          </div>
-        </article>
-
-        <article class="gcard w4 reveal d2" data-cat="equipment">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
-              alt="Piling Rig"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Equipment</div>
-            <div class="gtitle">Piling Rig</div>
-          </div>
-        </article>
-
-        <article class="gcard w6 reveal" data-cat="power">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1000&q=80&crop=right"
-              alt="Turnaround Lift Plan"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Power · Maintenance</div>
-            <div class="gtitle">Turnaround Lift Plan</div>
-          </div>
-        </article>
-
-        <article class="gcard w6 reveal d1" data-cat="construction">
-          <div class="para-wrap" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80&crop=left"
-              alt="Structural Engineering"
-              loading="lazy"
-            />
-          </div>
-          <div class="gveil"></div>
-          <div class="gmeta">
-            <div class="gtag">Engineering &amp; EPC</div>
-            <div class="gtitle">Structural Engineering</div>
-          </div>
-        </article>
+            <div
+              class="gmeta absolute left-0 bottom-0 p-[clamp(16px,2vw,26px)] z-[2] translate-y-2 opacity-90 transition-all duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-hover:opacity-100"
+            >
+              <div class="gtag font-mono text-[10.5px] tracking-[0.14em] uppercase text-signal">
+                {{ item.equipment }}
+              </div>
+              <div
+                class="gtitle font-display font-extrabold uppercase text-[clamp(17px,1.9vw,24px)] mt-2 tracking-[0.01em]"
+              >
+                {{ item.scope }}
+              </div>
+              <div class="gloc font-mono text-[11px] text-concrete tracking-[0.06em] mt-1">
+                {{ item.location }}
+              </div>
+            </div>
+          </article>
+        }
       </div>
     </div>
   </section>
