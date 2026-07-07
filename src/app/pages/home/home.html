@@ -20,7 +20,7 @@
     <div class="wrap hero-inner z-3 w-full relative">
       <span class="eyebrow reveal in">Nigeria's Heavy-Lift Specialists</span>
       <h1
-        class="display text-[clamp(54px,8vw,70px)] font-stretch-110% tracking-[-0.02em] mt-5.5 mb-6.5"
+        class="display text-[clamp(30px,8vw,70px)] font-stretch-110% tracking-[-0.02em] mt-5.5 mb-6.5"
       >
         <span class="line block overflow-hidden"><span>We lift.</span></span>
         <span class="line block overflow-hidden"><span>We move.</span></span>
@@ -28,7 +28,7 @@
           ><span>We <em>deliver.</em></span></span
         >
       </h1>
-      <p class="lede hero-sub reveal in">
+      <p class="lede hero-sub reveal in text-base! md:text-2xl!">
         Providing crane services, engineered lift, and specialised transportation and rigging
         solutions across multiple market sectors in Nigeria. We are engineered to lift your projects
         to greater heights.
@@ -85,49 +85,77 @@
   </div>
 
   <!-- WHO WE ARE -->
-  <section class="section-pad band-basalt">
-    <div class="wrap split">
+  <section class="py-[clamp(72px,11vw,150px)] bg-(--basalt)">
+    <div
+      class="w-[90%] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[clamp(36px,6vw,90px)] items-center"
+    >
       <div class="reveal-left in">
         <span class="eyebrow">Who we are</span>
+
         <h2
-          class="display"
-          style="font-size: clamp(34px, 5.5vw, 72px); margin: 20px 0 24px; letter-spacing: -0.015em"
+          class="font-display font-extrabold font-stretch-115% leading-[0.92] tracking-[-0.015em] uppercase text-[clamp(34px,5.5vw,70px)] mt-5 mb-6"
         >
           Built for Africa's
-          <em class="signal-text" style="font-style: normal">toughest</em> projects
+          <em class="signal-text not-italic">toughest</em>
+          projects
         </h2>
-        <p class="lede" style="margin-bottom: 20px">
+
+        <p class="text-[clamp(18px,2.1vw,19px)] leading-normal text-concrete font-normal mb-5">
           Magma Technical Services is a trusted provider of engineered lifting, crane rental, heavy
           transport, and specialised project support solutions for Nigeria’s oil and gas,
           petrochemical, energy, construction, power, manufacturing, marine, aviation, and
           infrastructure sectors.
         </p>
-        <p style="color: var(--steel-mut)">
+
+        <p class="text-(--steel-mut)">
           Our capabilities support the full lifecycle of industrial and infrastructure projects,
           from construction and plant expansion to maintenance shutdowns, drilling operations,
           equipment installation, commissioning, and emergency response.
         </p>
       </div>
-      <div class="pillars reveal-right in">
-        <div class="pillar">
-          <h3>Our Vision</h3>
-          <p>
+
+      <div class="reveal-right in flex flex-col">
+        <div
+          class="border-l-[3px] border-(--steel-line) hover:border-signal transition-colors duration-300 ease-(--ease) py-5.5 pl-6.5"
+        >
+          <h3
+            class="font-display font-extrabold leading-[0.95] uppercase text-[19px] tracking-[0.02em] mb-2"
+          >
+            Our Vision
+          </h3>
+
+          <p class="text-[15.5px] text-(--steel-mut)">
             To be Africa’s most trusted partner for engineered lifting and specialised transport
             solutions, recognised for safety, reliability, and operational excellence.
           </p>
         </div>
-        <div class="pillar">
-          <h3>Our Mission</h3>
-          <p>
+
+        <div
+          class="border-l-[3px] border-(--steel-line) hover:border-signal transition-colors duration-300 ease-(--ease) py-5.5 pl-6.5"
+        >
+          <h3
+            class="font-display font-extrabold leading-[0.95] uppercase text-[19px] tracking-[0.02em] mb-2"
+          >
+            Our Mission
+          </h3>
+
+          <p class="text-[15.5px] text-(--steel-mut)">
             To deliver safe, engineered lifting and transport solutions that help clients execute
             complex projects with confidence, while creating lasting value through technical
             expertise, dependable service, and an uncompromising commitment to safety.
           </p>
         </div>
-        <div class="pillar ember">
-          <h3>HSE Commitment</h3>
-          <p class="font-bold text-white!">Safety without compromise.</p>
-          <p>
+
+        <div class="border-l-[3px] border-(--ember) py-5.5 pl-6.5">
+          <h3
+            class="font-display font-extrabold leading-[0.95] uppercase text-[19px] tracking-[0.02em] mb-2"
+          >
+            HSE Commitment
+          </h3>
+
+          <p class="font-bold text-white mb-2">Safety without compromise.</p>
+
+          <p class="text-[15.5px] text-(--steel-mut)">
             HSE excellence is the foundation of every operation. Through rigorous planning, risk
             assessment, continuous training and strict compliance with industry best practices, we
             protect our people, clients, communities and the environment on every project.
@@ -187,38 +215,17 @@
       </div>
       <div class="svc-grid stagger in">
         <article class="svc reveal in">
-          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path
-              d="M8 40h12V14l24-6"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linejoin="round"
-            />
-            <path d="M20 14l16 4" stroke="currentColor" stroke-width="2.5" />
-            <path d="M36 12v10M31 22h10" stroke="currentColor" stroke-width="2.5" />
-          </svg>
+          <i class="text-3xl! ti ti-weight svc-ico" aria-hidden="true"></i>
           <div class="idx"><b>01</b></div>
           <h3>ENGINEERED HEAVY LIFT</h3>
           <p>
             We plan and execute complex lifting operations using modern equipment and customised
-            methods tailored to our client’s project requirements.
+            methods tailored to our client's project requirements.
           </p>
         </article>
+
         <article class="svc reveal d1 in">
-          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path
-              d="M6 34c4 3 6 3 10 0s6-3 10 0 6 3 10 0 6-3 6-3"
-              stroke="currentColor"
-              stroke-width="2.5"
-            />
-            <path
-              d="M12 30l6-14h12l6 14"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linejoin="round"
-            />
-            <path d="M24 16V8" stroke="currentColor" stroke-width="2.5" />
-          </svg>
+          <i class="text-3xl! ti ti-crane svc-ico" aria-hidden="true"></i>
           <div class="idx"><b>02</b></div>
           <h3>CRANE HIRE</h3>
           <p>
@@ -226,18 +233,9 @@
             and complete project management for safe and seamless execution.
           </p>
         </article>
+
         <article class="svc reveal d2 in">
-          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path d="M8 10h32" stroke="currentColor" stroke-width="2.5" />
-            <path d="M24 10v8" stroke="currentColor" stroke-width="2.5" />
-            <circle cx="24" cy="23" r="5" stroke="currentColor" stroke-width="2.5" />
-            <path
-              d="M19 27l-3 13h16l-3-13"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linejoin="round"
-            />
-          </svg>
+          <i class="text-3xl! ti ti-truck svc-ico" aria-hidden="true"></i>
           <div class="idx"><b>03</b></div>
           <h3>HEAVY TRANSPORT</h3>
           <p>
@@ -245,18 +243,9 @@
             planning to load-out/load-in operations.
           </p>
         </article>
+
         <article class="svc reveal in">
-          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <rect x="6" y="18" width="24" height="14" stroke="currentColor" stroke-width="2.5" />
-            <path
-              d="M30 22h8l4 6v4h-12z"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linejoin="round"
-            />
-            <circle cx="14" cy="36" r="3.5" stroke="currentColor" stroke-width="2.5" />
-            <circle cx="34" cy="36" r="3.5" stroke="currentColor" stroke-width="2.5" />
-          </svg>
+          <i class="text-3xl! ti ti-building-factory-2 svc-ico" aria-hidden="true"></i>
           <div class="idx"><b>04</b></div>
           <h3>PLANT SUPPORT</h3>
           <p>
@@ -265,15 +254,9 @@
             maintenance activities.
           </p>
         </article>
+
         <article class="svc reveal d1 in">
-          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2.5" />
-            <path
-              d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"
-              stroke="currentColor"
-              stroke-width="2.5"
-            />
-          </svg>
+          <i class="text-3xl! ti ti-tools svc-ico" aria-hidden="true"></i>
           <div class="idx"><b>05</b></div>
           <h3>RIGGING &amp; INSTALLATION</h3>
           <p>
@@ -282,22 +265,9 @@
             assets.
           </p>
         </article>
+
         <article class="svc reveal d2 in">
-          <svg class="svc-ico" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <path
-              d="M8 16l16-8 16 8-16 8z"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M8 16v16l16 8 16-8V16"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linejoin="round"
-            />
-            <path d="M24 24v16" stroke="currentColor" stroke-width="2.5" />
-          </svg>
+          <i class="text-3xl! ti ti-clipboard-list svc-ico" aria-hidden="true"></i>
           <div class="idx"><b>06</b></div>
           <h3>PROJECT ENGINEERING &amp; LIFT PLANNING</h3>
           <p>
@@ -310,7 +280,7 @@
   </section>
 
   <!-- EQUIPMENT -->
-  <section class="section-pad band-basalt">
+  <section class="py-[clamp(72px,11vw,150px)] bg-(--basalt)">
     <div class="wrap equip">
       <div class="reveal-left in">
         <span class="eyebrow">Ready to deploy</span>
@@ -452,22 +422,25 @@
   </section>
 
   <!-- CTA -->
-  <section class="section-pad cta band-basalt">
+  <section class="py-[clamp(72px,11vw,150px)] bg-ink cta">
     <div class="cta-glow" aria-hidden="true"></div>
-    <div class="wrap cta-inner stagger in">
-      <span class="eyebrow" style="justify-content: center">Let's work together</span>
-      <h2 class="display" style="margin-top: 18px">
-        Got a lift that<br />
-        <em> can't fail?</em>
+    <div class="w-[90%] max-w-220 mx-auto relative z-2 text-center stagger in">
+      <span class="eyebrow justify-center">Let's work together</span>
+
+      <h2
+        class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.02em] uppercase text-[clamp(38px,7vw,104px)] mt-4.5"
+      >
+        Got a lift that <br />
+        <em class="not-italic text-signal">can't fail?</em>
       </h2>
-      <p>
+
+      <p class="text-concrete max-w-135 mx-auto mt-6 mb-9">
         Send us the scope. We'll mobilise the crew, the iron and the engineering to get it done,
         safely and on schedule.
       </p>
-      <div class="cta-actions">
-        <a href="#contact" data-page="contact" class="btn btn-signal"
-          >Get a quote <span class="arr">→</span></a
-        >
+
+      <div class="flex flex-wrap justify-center gap-3.5">
+        <a routerLink="/contact" class="btn btn-signal"> Get a quote <span class="arr">→</span> </a>
         <a href="tel:+2349065033446" class="btn btn-ghost">+234 906 503 3446</a>
       </div>
     </div>

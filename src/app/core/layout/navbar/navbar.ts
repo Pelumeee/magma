@@ -15,6 +15,11 @@ export class Navbar {
     this.scrolled.set(window.scrollY > 40);
   }
 
+  @HostListener('window:keydown.escape')
+  onEscape() {
+    this.closeMenu();
+  }
+
   toggleMenu() {
     this.menuOpen.update((v) => !v);
   }
@@ -27,7 +32,7 @@ export class Navbar {
     { label: 'Home', route: '/' },
     { label: 'About', route: '/about' },
     { label: 'Projects', route: '/projects' },
-    { label: 'Equipments', route: '/equipments' },
+    // { label: 'Equipments', route: '/equipments' },
     // { label: 'Insights', route: '/insights' },
     { label: 'Contact', route: '/contact' },
   ];
