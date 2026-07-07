@@ -22,7 +22,7 @@
 
   <div class="hazard" aria-hidden="true"></div>
 
-  <section class="section-pad band-basalt">
+  <section class="py-[clamp(72px,11vw,150px)] bg-(--basalt)">
     <div class="w-[90%] max-w-7xl mx-auto">
       <!-- <div class="filterbar reveal in">
         <button class="chip active" data-filter="all">All work</button>
@@ -34,17 +34,14 @@
       </div> -->
 
       <div
-        class="gal-grid stagger in grid grid-cols-2 md:grid-cols-12 gap-[clamp(12px,1.4vw,18px)] [grid-auto-flow:dense]"
+        class="gal-grid stagger in grid grid-cols-2 md:grid-cols-12 gap-[clamp(12px,1.4vw,18px)] grid-flow-dense"
       >
         @for (item of gallery; track item.img) {
           <article
-            class="gcard group relative isolate overflow-hidden border border-steel-line reveal"
+            class="group relative isolate overflow-hidden border border-(--steel-line) reveal"
             [ngClass]="[sizeStyles[item.size].span, sizeStyles[item.size].aspect]"
           >
-            <div
-              class="para-wrap absolute -inset-y-[12%] inset-x-0 z-0 overflow-visible"
-              aria-hidden="true"
-            >
+            <div class="absolute inset-y-[-12%] inset-x-0 z-0 overflow-visible" aria-hidden="true">
               <img
                 [src]="item.img"
                 [alt]="item.scope"
@@ -54,21 +51,21 @@
             </div>
 
             <div
-              class="gveil absolute inset-0 z-[1] bg-[linear-gradient(180deg,transparent_35%,rgba(10,11,13,0.9))] opacity-[0.85] transition-opacity duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-100"
+              class="absolute inset-0 z-1 bg-[linear-gradient(180deg,transparent_35%,rgba(10,11,13,0.9))] opacity-[0.85] transition-opacity duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-100"
             ></div>
 
             <div
-              class="gmeta absolute left-0 bottom-0 p-[clamp(16px,2vw,26px)] z-[2] translate-y-2 opacity-90 transition-all duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-hover:opacity-100"
+              class="absolute left-0 bottom-0 p-[clamp(16px,2vw,26px)] z-2 translate-y-2 opacity-90 transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-hover:opacity-100"
             >
-              <div class="gtag font-mono text-[10.5px] tracking-[0.14em] uppercase text-signal">
+              <div class="font-mono text-[10.5px] tracking-[0.14em] uppercase text-signal">
                 {{ item.equipment }}
               </div>
               <div
-                class="gtitle font-display font-extrabold uppercase text-[clamp(17px,1.9vw,24px)] mt-2 tracking-[0.01em]"
+                class="font-display font-extrabold uppercase text-[clamp(17px,1.9vw,24px)] mt-2 tracking-[0.01em]"
               >
                 {{ item.scope }}
               </div>
-              <div class="gloc font-mono text-[11px] text-concrete tracking-[0.06em] mt-1">
+              <div class="font-mono text-[11px] text-concrete tracking-[0.06em] mt-1">
                 {{ item.location }}
               </div>
             </div>

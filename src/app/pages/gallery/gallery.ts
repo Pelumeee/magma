@@ -7,7 +7,6 @@ import { GALLERY, GalleryItem } from '../../shared/data/gallery-data';
   selector: 'app-gallery',
   imports: [RouterLink, NgClass],
   templateUrl: './gallery.html',
-  styleUrl: './gallery.css',
 })
 
 export class Gallery {
