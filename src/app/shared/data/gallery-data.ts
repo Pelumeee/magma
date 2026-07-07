@@ -38,7 +38,7 @@ export const GALLERY: GalleryItem[] = [
       'Heavy-lift crane support for ongoing manufacturing operations at Inner Galaxy Steel.',
   },
   {
-    scope: 'Rig Operation Support Operations Support',
+    scope: 'Rig Operation Support',
     equipment: '50T (Hilong 27 rig) & 75T (Renaissance T209 Rig) 4x4 RT Cranes',
     location: 'Bayelsa',
     img: '/projects/fourth.png',
