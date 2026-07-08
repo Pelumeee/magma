@@ -49,7 +49,6 @@ export class Form implements AfterViewInit {
     const container = this.turnstileContainer()?.nativeElement;
     if (!container) return;
 
-    // turnstile script loads async — retry briefly if it's not ready yet
     if (typeof turnstile === 'undefined') {
       setTimeout(() => this.renderTurnstile(), 200);
       return;
@@ -63,7 +62,6 @@ export class Form implements AfterViewInit {
     });
   }
 
-  /** Returns the first active error message for a control, or null if valid/untouched. */
   errorFor(controlName: keyof typeof this.form.controls): string | null {
     const control = this.form.controls[controlName];
     if (!control.touched || !control.errors) return null;
@@ -112,6 +110,7 @@ export class Form implements AfterViewInit {
           this.form.reset();
           this.turnstileToken.set(null);
           if (this.widgetId) turnstile.reset(this.widgetId);
+          setTimeout(() => this.status.set('idle'), 3000);
         },
         error: (err) => {
           console.error('Enquiry send failed:', err);
