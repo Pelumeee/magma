@@ -9,9 +9,6 @@
     "test": "ng test",
     "serve:ssr:magma-website": "node dist/magma-website/server/server.mjs"
   },
-  "engines": {
-    "node": "22.x"
-  },
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,
