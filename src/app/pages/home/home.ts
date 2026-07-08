@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { GALLERY, GalleryItem } from '../../shared/data/gallery-data';
 import { Marquee } from './components/marquee/marquee';
+import { Hero } from "./components/hero/hero";
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, Marquee],
+  imports: [RouterLink, Marquee, Hero],
   templateUrl: './home.html',
 })
 

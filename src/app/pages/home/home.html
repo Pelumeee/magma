@@ -1,90 +1,6 @@
-<!-- <app-hero /> -->
 <main class="page active">
   <!-- HERO -->
-  <header
-    class="hero min-h-screen flex items-end relative overflow-hidden py-[clamp(40px,6vw,80px)]"
-  >
-    <!-- Real photo with parallax -->
-    <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-      <img
-        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
-        alt="Heavy-lift crane operations"
-        id="hero-img"
-        fetchpriority="high"
-        class="absolute top-[-15%] left-0 w-full h-[130%] object-cover object-[center_35%] will-change-transform"
-      />
-    </div>
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-vignette" aria-hidden="true"></div>
-
-    <div class="w-[90%] max-w-7xl mx-auto hero-inner z-3 relative">
-      <span class="eyebrow reveal in">Nigeria's Heavy-Lift Specialists</span>
-      <h1
-        class="font-display font-extrabold uppercase leading-[0.92] text-[clamp(35px,8vw,75px)] font-stretch-110% tracking-[-0.02em] mt-5.5 mb-6.5"
-      >
-        <span class="block overflow-hidden"><span>We lift.</span></span>
-        <span class="block overflow-hidden"><span>We move.</span></span>
-        <span class="block overflow-hidden"
-          ><span>We <em class="text-signal not-italic">deliver.</em></span></span
-        >
-      </h1>
-      <p
-        class="reveal in mb-8.5 max-w-140 text-[clamp(18px,2.1vw,23px)] leading-normal font-normal text-concrete"
-      >
-        Providing crane services, engineered lift, and specialised transportation and rigging
-        solutions across multiple market sectors in Nigeria. We are engineered to lift your projects
-        to greater heights.
-      </p>
-
-      <div class="flex flex-wrap gap-3.5 reveal d1 in">
-        <a href="#services" class="btn btn-signal">Our services <span class="arr">→</span></a>
-        <a href="#gallery" class="btn btn-ghost">View projects <span class="arr">→</span></a>
-      </div>
-      <div
-        class="relative z-3 mt-[clamp(40px,7vw,90px)] grid grid-cols-2 border-t border-white/10 lg:grid-cols-4"
-      >
-        <div class="reveal in d1 border-r border-white/10 py-5.5 pr-5 pb-1">
-          <div class="font-display text-[clamp(26px,4vw,40px)] font-extrabold font-stretch-110%">
-            <span data-count="2016">2016</span>
-          </div>
-          <div class="font-mono text-[11px] uppercase tracking-[0.12em] text-white/45">To Date</div>
-        </div>
-
-        <div class="reveal in d2 lg:border-r! border-white/10! py-5.5 pr-5 pb-1">
-          <div class="font-display text-[clamp(26px,4vw,40px)] font-extrabold font-stretch-110%">
-            <span class="text-signal" data-count="300" data-suffix="T"> 300T </span>
-          </div>
-          <div class="font-mono text-[11px] uppercase tracking-[0.12em] text-white/45">
-            Max lift capacity
-          </div>
-        </div>
-
-        <div class="reveal in d3 border-r border-white/10 py-5.5 pr-5 pb-1">
-          <div class="font-display text-[clamp(26px,4vw,40px)] font-extrabold font-stretch-110%">
-            30+
-          </div>
-          <div class="font-mono text-[11px] uppercase tracking-[0.12em] text-white/45">
-            Cranes in Fleet
-          </div>
-        </div>
-
-        <div class="reveal in d4 py-5.5 pr-5 pb-1">
-          <div class="font-display text-[clamp(26px,4vw,40px)] font-extrabold font-stretch-110%">
-            <span data-count="100">100+</span>
-          </div>
-          <div class="font-mono text-[11px] uppercase tracking-[0.12em] text-white/45">
-            Staff Strength
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="scroll-hint" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="arr-wrap"></div>
-    </div>
-  </header>
+  <app-hero />
 
   <div class="hazard" aria-hidden="true"></div>
 
@@ -225,7 +141,7 @@
   </section>
 
   <!-- CORE SERVICES -->
-  <section class="py-[clamp(72px,11vw,150px)] bg-ink">
+  <section id="services" class="py-[clamp(72px,11vw,150px)] bg-ink">
     <div class="w-[90%] max-w-7xl mx-auto">
       <div
         class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-end mb-[clamp(40px,6vw,72px)]"
@@ -305,7 +221,7 @@
           needs.
         </p>
 
-        <!-- <a href="/equipments" class="btn btn-signal">
+        <!-- <a routerLink="/equipments" class="btn btn-signal">
           Browse equipment <span class="arr">→</span>
         </a> -->
       </div>
@@ -335,7 +251,7 @@
   </section>
 
   <!-- PROJECTS ON CRITICAL PATH -->
-  <section class="py-[clamp(72px,11vw,150px)] bg-ink">
+  <section id="projects" class="py-[clamp(72px,11vw,150px)] bg-ink">
     <div class="w-[90%] max-w-7xl mx-auto">
       <div
         class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-end mb-[clamp(40px,6vw,72px)]"
@@ -349,7 +265,7 @@
           </h2>
         </div>
         <p class="text-concrete">
-          <a href="/projects" class="btn btn-ghost">All projects <span class="arr">→</span></a>
+          <a routerLink="/projects" class="btn btn-ghost">All projects <span class="arr">→</span></a>
         </p>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 stagger in">
@@ -380,7 +296,9 @@
                 {{ item.equipment }}
               </span>
 
-              <h3 class="mt-3 mb-2 text-[clamp(22px,2.6vw,32px)] tracking-[0.005em]">
+              <h3
+                class="font-display font-extrabold uppercase text-[clamp(17px,1.9vw,24px)] mt-2 tracking-[0.01em]"
+              >
                 {{ item.scope }}
               </h3>
 

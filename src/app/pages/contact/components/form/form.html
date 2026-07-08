@@ -1,1 +1,130 @@
-<p>form works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="grid grid-cols-2 gap-4" novalidate>
+  <div class="flex flex-col gap-2">
+    <label for="name" class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)">
+      Full name
+    </label>
+    <input
+      id="name"
+      type="text"
+      placeholder="Your name"
+      formControlName="name"
+      class="form-control"
+      [class.border-red-500]="isInvalid('name')"
+    />
+    @if (errorFor('name'); as error) {
+      <span class="text-xs text-red-500">{{ error }}</span>
+    }
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <label for="email" class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)">
+      Email
+    </label>
+    <input
+      id="email"
+      type="email"
+      placeholder="you@company.com"
+      formControlName="email"
+      class="form-control"
+      [class.border-red-500]="isInvalid('email')"
+    />
+    @if (errorFor('email'); as error) {
+      <span class="text-xs text-red-500">{{ error }}</span>
+    }
+  </div>
+
+  <div class="col-span-2 flex flex-col gap-2">
+    <label
+      for="company"
+      class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)"
+    >
+      Company / organisation
+    </label>
+    <input
+      id="company"
+      type="text"
+      placeholder="Company name"
+      formControlName="company"
+      class="form-control"
+    />
+  </div>
+
+  <div class="col-span-2 flex flex-col gap-2">
+    <label
+      for="service"
+      class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)"
+    >
+      Service required
+    </label>
+    <select
+      id="service"
+      formControlName="service"
+      class="form-control"
+      [class.border-red-500]="isInvalid('service')"
+    >
+      <option value="" disabled>Select a service</option>
+      @for (s of services; track s) {
+        <option [value]="s">{{ s }}</option>
+      }
+    </select>
+    @if (errorFor('service'); as error) {
+      <span class="text-xs text-red-500">{{ error }}</span>
+    }
+  </div>
+
+  <div class="col-span-2 flex flex-col gap-2">
+    <label for="msg" class="font-mono text-[11px] tracking-[0.14em] uppercase text-(--steel-mut)">
+      Describe your project
+    </label>
+    <textarea
+      id="msg"
+      placeholder="Scope, location, timeline, load details…"
+      formControlName="msg"
+      class="form-control min-h-32.5 resize-y"
+      [class.border-red-500]="isInvalid('msg')"
+    ></textarea>
+    @if (errorFor('msg'); as error) {
+      <span class="text-xs text-red-500">{{ error }}</span>
+    }
+  </div>
+
+  <!-- Honeypot — hidden from real users, bots often fill it blindly -->
+  <div class="absolute -left-[9999px]" aria-hidden="true">
+    <input type="text" tabindex="-1" autocomplete="off" formControlName="honeypot" />
+  </div>
+
+  <div class="col-span-2">
+    <div #turnstileContainer></div>
+  </div>
+
+  <div class="col-span-2 flex items-center justify-between gap-4 flex-wrap mt-1.5">
+    <span class="font-mono text-[11px] tracking-[0.04em] text-(--steel-mut)">
+      @switch (status()) {
+        @case ('success') {
+          <span class="text-green-500"
+            >✓ Enquiry sent — we'll respond within one business day.</span
+          >
+        }
+        @case ('error') {
+          <span class="text-red-500"
+            >Something went wrong. Please try again or call us directly.</span
+          >
+        }
+        @case ('captcha-error') {
+          <span class="text-red-500">Please complete the captcha above.</span>
+        }
+        @default {
+          // We respond within one business day.
+        }
+      }
+    </span>
+
+    <button type="submit" class="btn btn-signal" [disabled]="status() === 'sending'">
+      @if (status() === 'sending') {
+        Sending…
+      } @else {
+        Send enquiry <span class="arr">→</span>
+      }
+    </button>
+  </div>
+</form>

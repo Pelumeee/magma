@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, inject } from '@angular/core';
 import { AnimationsService } from '../../core/services/animations.service';
+import { Form } from "./components/form/form";
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [Form],
   templateUrl: './contact.html',
 })
 export class Contact implements AfterViewInit {
