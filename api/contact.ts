@@ -30,7 +30,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: 'Missing captcha token' });
   }
 
-  // 1. Verify Turnstile token
   try {
     const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
@@ -51,7 +50,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(502).json({ error: 'Captcha verification unavailable' });
   }
 
-  // 2. Send via Mailjet
   try {
     const mailjetRes = await fetch('https://api.mailjet.com/v3.1/send', {
       method: 'POST',

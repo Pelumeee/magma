@@ -38,7 +38,7 @@ export class Form implements AfterViewInit {
     company: [''],
     service: ['', [Validators.required]],
     msg: ['', [Validators.required, Validators.minLength(20)]],
-    honeypot: [''], // real users never see/fill this — bots often do
+    honeypot: [''],
   });
 
   ngAfterViewInit() {
