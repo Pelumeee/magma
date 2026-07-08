@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { GALLERY, GalleryItem } from '../../shared/data/gallery-data';
 import { Marquee } from './components/marquee/marquee';
-import { Hero } from "./components/hero/hero";
+import { Hero } from './components/hero/hero';
 
 @Component({
   selector: 'app-home',
   imports: [RouterLink, Marquee, Hero],
   templateUrl: './home.html',
 })
-
 export class Home {
   plates: GalleryItem[] = GALLERY.slice(0, 4);
 
@@ -105,6 +104,84 @@ export class Home {
     { no: '03', name: 'Crawler Cranes', capacity: '50-300T' },
     { no: '04', name: 'Lowboy Trailers', capacity: '50-150T' },
     { no: '05', name: 'SPMT Trailers', capacity: '' },
+  ];
+
+  clients = [
+    {
+      url: 'clients/coca-cola.png',
+      alt: 'Coca-Cola',
+      animationClass: '',
+    },
+    {
+      url: 'clients/olam.png',
+      alt: 'Olam',
+      animationClass: 'd1',
+    },
+    {
+      url: 'clients/renaissance.png',
+      alt: 'Renaissance Africa Energy Company',
+      animationClass: 'd2',
+    },
+    {
+      url: 'clients/seepco.jpg',
+      alt: 'SEEPCO',
+      animationClass: 'd3',
+    },
+    // {
+    //   url: 'clients/geoplex.png',
+    //   alt: 'Geoplex',
+    //   animationClass: 'd4',
+    // },
+    {
+      url: 'clients/total.png',
+      alt: 'TotalEnergies',
+      animationClass: '',
+    },
+    {
+      url: 'clients/seflam.jpg',
+      alt: 'Seflam SGL',
+      animationClass: 'd1',
+    },
+    {
+      url: 'clients/bua.png',
+      alt: 'BUA Cement',
+      animationClass: 'd2',
+    },
+    {
+      url: 'clients/chesroo.png',
+      alt: 'Chesroc Nigeria Limited',
+      animationClass: 'd3',
+    },
+    {
+      url: 'clients/weatherford.png',
+      alt: 'Weatherford',
+      animationClass: 'd4',
+    },
+    // {
+    //   url: 'clients/tecon.png',
+    //   alt: 'Tecon',
+    //   animationClass: '',
+    // },
+    {
+      url: 'clients/sterling.jpg',
+      alt: 'Sterling Global Management',
+      animationClass: 'd1',
+    },
+    // {
+    //   url: 'clients/amber-resources.png',
+    //   alt: 'Amber Resources',
+    //   animationClass: 'd2',
+    // },
+    {
+      url: 'clients/bourbon.png',
+      alt: 'Bourbon Interoil Nigeria Ltd',
+      animationClass: 'd3',
+    },
+    // {
+    //   url: 'clients/dangote.png',
+    //   alt: 'Dangote',
+    //   animationClass: 'd4',
+    // },
   ];
 
   descriptionFor(item: GalleryItem): string {

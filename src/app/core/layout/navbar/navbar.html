@@ -6,12 +6,10 @@
   [class.py-3]="scrolled()"
 >
   <nav class="w-[90%] max-w-7xl mx-auto flex items-center justify-between">
-    <!-- Logo -->
     <a routerLink="/" class="relative z-50 flex items-center">
       <img src="logo.png" alt="Magma" class="h-14 w-auto" />
     </a>
 
-    <!-- Desktop Links -->
     <div class="hidden lg:flex items-center gap-9">
       @for (link of links; track link.route) {
         <a
@@ -25,7 +23,6 @@
       }
     </div>
 
-    <!-- CTA -->
     <div class="hidden lg:flex">
       <a routerLink="/contact" class="group nav-cta">
         Get a Quote
@@ -33,7 +30,6 @@
       </a>
     </div>
 
-    <!-- Mobile Toggle -->
     <button
       (click)="toggleMenu()"
       class="relative z-50 flex lg:hidden flex-col gap-1.5"
@@ -58,7 +54,6 @@
   </nav>
 </header>
 
-<!-- Backdrop — now a sibling of <header>, unaffected by its backdrop-blur -->
 <div
   class="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden"
   [class.opacity-100]="menuOpen()"
@@ -69,21 +64,20 @@
   (click)="closeMenu()"
 ></div>
 
-<!-- Mobile drawer — slides in from the left -->
 <div
   id="mobile-nav"
-  class="fixed inset-y-0 left-0 z-50 flex w-[80%] max-w-[340px] -translate-x-full flex-col justify-center gap-1 border-r border-white/10 bg-zinc-950/98 px-9 backdrop-blur-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden"
+  class="fixed inset-y-0 left-0 z-50 flex w-[80%] max-w-85 -translate-x-full flex-col justify-center gap-1 border-r border-white/10 bg-zinc-950/98 px-9 backdrop-blur-2xl transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden"
   [class.translate-x-0]="menuOpen()"
   [class.-translate-x-full]="!menuOpen()"
 >
-  <div class="mb-[clamp(28px,5vw,44px)]">
-    <img src="logo.png" alt="Magma" class="h-[38px] w-auto block" />
+  <div class="mb-[clamp(33px,5vw,44px)]">
+    <img src="logo.png" alt="Magma" class="h-12 w-auto block" />
   </div>
 
   @for (link of links; track link.route; let i = $index) {
     <a
       [routerLink]="link.route"
-      routerLinkActive="text-orange-500"
+      routerLinkActive="text-signal!"
       [routerLinkActiveOptions]="{ exact: link.route === '/' }"
       (click)="closeMenu()"
       class="border-b border-white/[0.07] py-4 font-display text-3xl font-extrabold uppercase text-white transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-orange-500"
@@ -98,13 +92,13 @@
   }
 
   <div
-    class="mt-9 font-mono text-xs uppercase tracking-[0.1em] text-zinc-400 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+    class="mt-9 font-mono text-xs uppercase tracking-widest text-zinc-400 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
     [class.opacity-100]="menuOpen()"
     [class.translate-x-0]="menuOpen()"
     [class.opacity-0]="!menuOpen()"
     [class.translate-x-5]="!menuOpen()"
     [style.transition-delay.ms]="menuOpen() ? links.length * 70 + 150 : 0"
   >
-    PORT HARCOURT · RIVERS STATE<br />0906 503 3446
+    PORT HARCOURT · RIVERS STATE<br />+234 906 503 3446
   </div>
 </div>

@@ -1,1 +1,196 @@
-<p>equipments works!</p>
+<main class="page" id="page-equipment" data-page="equipment">
+  <header class="relative overflow-hidden pt-[clamp(150px,18vw,230px)] pb-[clamp(60px,8vw,110px)]">
+    <div class="hero-glow opacity-[0.85]" aria-hidden="true"></div>
+
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <span class="eyebrow reveal in relative z-2">The fleet</span>
+
+      <h1
+        class="font-display font-extrabold font-stretch-110% leading-[0.92] tracking-[-0.02em] uppercase relative z-2 text-[clamp(30px,9vw,80px)] mt-4.5"
+      >
+        Iron on the <br /><span class="text-signal">ground</span>
+      </h1>
+
+      <p
+        class="relative z-2 max-w-155 mt-6 reveal in text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
+      >
+        Cranes, rigging and heavy transport — inspected, maintained and crewed for Nigeria's
+        toughest lifts. This is what shows up on site.
+      </p>
+    </div>
+  </header>
+
+  <div class="hazard" aria-hidden="true"></div>
+
+  <!-- SPEC SHEET -->
+  <section class="py-[clamp(72px,11vw,150px)] bg-(--basalt)">
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-end mb-[clamp(38px,6vw,70px)]"
+      >
+        <div>
+          <span class="eyebrow">Ready to deploy</span>
+          <h2
+            class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.015em] uppercase text-[clamp(34px,5.5vw,76px)] mt-4.5"
+          >
+            What's on the <em class="text-signal not-italic">yard</em>
+          </h2>
+        </div>
+        <p class="text-concrete">
+          A growing fleet of rough-terrain and truck-mounted cranes, marine vessels and heavy
+          transport — available for short and long-term hire, operated by trained personnel with
+          full maintenance support.
+        </p>
+      </div>
+
+      <div class="flex flex-col">
+        @for (item of equipmentList; track item.no) {
+          <div
+            class="grid md:grid-cols-[56px_1fr_auto] grid-cols-[20px_1fr_auto] items-center gap-4.5 border-t border-(--steel-line) py-5.5 pr-1 pl-1 hover:pl-3.5 transition-all duration-300 ease-(--ease)"
+            [class.border-b]="item === equipmentList[equipmentList.length - 1]"
+          >
+            <span class="font-mono text-[13px] text-steel-mut">
+              {{ item.no }}
+            </span>
+
+            <span
+              class="font-display font-bold font-stretch-108% uppercase md:text-[18px] tracking-[0.01em]"
+            >
+              {{ item.name }}
+            </span>
+
+            <span class="font-mono text-[12px] tracking-[0.08em] whitespace-nowrap text-signal">
+              {{ item.capacity }}
+            </span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- FLEET IN THE FIELD -->
+  <section class="py-[clamp(72px,11vw,150px)] bg-(--ink)">
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-end mb-[clamp(38px,6vw,70px)]"
+      >
+        <div>
+          <span class="eyebrow">On site</span>
+          <h2
+            class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.015em] uppercase text-[clamp(34px,5.5vw,76px)] mt-4.5"
+          >
+            Fleet in the <em class="text-signal not-italic">field</em>
+          </h2>
+        </div>
+        <p class="text-concrete">
+          From the yard in Port Harcourt to refineries, plants and drill sites across the country —
+          the same iron, working.
+        </p>
+      </div>
+
+      <div
+        class="gal-grid stagger in grid grid-cols-2 md:grid-cols-12 gap-[clamp(12px,1.4vw,18px)] grid-flow-dense"
+      >
+        @for (item of equipments; track item.img) {
+          <article
+            class="group relative isolate overflow-hidden border border-(--steel-line) reveal"
+            [ngClass]="[sizeStyles[item.size].span, sizeStyles[item.size].aspect]"
+          >
+            <div class="absolute inset-y-[-12%] inset-x-0 z-0 overflow-visible" aria-hidden="true">
+              <img
+                [src]="item.img"
+                [alt]="item.scope"
+                loading="lazy"
+                class="w-full h-full object-cover object-center block will-change-transform transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+              />
+            </div>
+
+            <div
+              class="absolute inset-0 z-1 bg-[linear-gradient(180deg,transparent_35%,rgba(10,11,13,0.9))] opacity-[0.85] transition-opacity duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:opacity-100"
+            ></div>
+
+            <div
+              class="absolute left-0 bottom-0 p-[clamp(16px,2vw,26px)] z-2 translate-y-2 opacity-90 transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-hover:opacity-100"
+            >
+              <div class="font-mono text-[10.5px] tracking-[0.14em] uppercase text-signal">
+                {{ item.equipment }}
+              </div>
+              <div
+                class="font-display font-extrabold uppercase text-[clamp(17px,1.9vw,24px)] mt-2 tracking-[0.01em]"
+              >
+                {{ item.scope }}
+              </div>
+              <div class="font-mono text-[11px] text-concrete tracking-[0.06em] mt-1">
+                {{ item.location }}
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITY -->
+  <section class="py-[clamp(72px,11vw,150px)] bg-foundry text-foundry-ink">
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[1fr_1fr_1fr_1.25fr] gap-px bg-(--foundry-line) border border-(--foundry-line) stagger in"
+      >
+        @for (stat of stats; track stat.label) {
+          <div
+            class="reveal-scale bg-foundry px-[clamp(20px,2.5vw,25px)] py-[clamp(28px,4vw,52px)]"
+            [class.in]="true"
+            [class.d1]="stat.animationClass === 'd1'"
+            [class.d2]="stat.animationClass === 'd2'"
+            [class.d3]="stat.animationClass === 'd3'"
+          >
+            <div
+              class="font-display font-extrabold font-stretch-110% text-[clamp(32px,6vw,55px)] leading-[0.9] text-foundry-ink"
+            >
+              <span
+                [attr.data-count]="stat.count"
+                [attr.data-suffix]="stat.suffix"
+                [class.text-signal-deep]="stat.highlight"
+              >
+                {{ stat.value }}
+              </span>
+            </div>
+
+            <div class="mt-3.5 font-mono text-[12px] tracking-widest uppercase text-foundry-mut">
+              {{ stat.label }}
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-[clamp(72px,11vw,150px)] bg-ink cta">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="w-[90%] max-w-220 mx-auto relative z-2 text-center stagger in">
+      <span class="eyebrow justify-center">Need this on your site?</span>
+
+      <h2
+        class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.02em] uppercase text-[clamp(38px,7vw,104px)] mt-4.5"
+      >
+        Hire the <br />
+        <em class="not-italic text-signal">iron.</em>
+      </h2>
+
+      <p class="text-concrete max-w-135 mx-auto mt-6 mb-9">
+        Tell us the scope and the schedule. We'll match the right crane, rig and crew from the fleet
+        above.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3.5">
+        <a routerLink="/contact" class="btn btn-signal">
+          Request equipment<span class="arr">→</span>
+        </a>
+        <a routerLink="/projects" class="btn btn-ghost">See our work<span class="arr">→</span> </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hazard thin" aria-hidden="true"></div>
+</main>

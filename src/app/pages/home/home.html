@@ -221,9 +221,9 @@
           needs.
         </p>
 
-        <!-- <a routerLink="/equipments" class="btn btn-signal">
+        <a routerLink="/equipments" class="btn btn-signal">
           Browse equipment <span class="arr">→</span>
-        </a> -->
+        </a>
       </div>
       <div class="flex flex-col reveal-right in">
         @for (item of equipment; track item.no) {
@@ -265,7 +265,9 @@
           </h2>
         </div>
         <p class="text-concrete">
-          <a routerLink="/projects" class="btn btn-ghost">All projects <span class="arr">→</span></a>
+          <a routerLink="/projects" class="btn btn-ghost"
+            >All projects <span class="arr">→</span></a
+          >
         </p>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 stagger in">
@@ -313,6 +315,47 @@
               </p>
             </div>
           </a>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+
+  <section class="py-[clamp(72px,11vw,150px)] bg-(--basalt)">
+    <div class="w-[90%] max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-end mb-[clamp(38px,6vw,70px)]"
+      >
+        <div>
+          <span class="eyebrow">Trusted by leaders</span>
+          <h2
+            class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.015em] uppercase text-[clamp(34px,5.5vw,76px)] mt-4.5"
+          >
+            Notable <em class="not-italic text-signal">clients</em>
+          </h2>
+        </div>
+
+        <p class="text-concrete">
+          From energy majors to industrial manufacturers — organisations that rely on us to keep
+          their critical operations moving.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-2 gap-[clamp(10px,1.4vw,16px)] md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+      >
+        @for (client of clients; track client.url) {
+          <div
+            class="cl-card"
+            [class]="client.animationClass"
+          >
+            <img
+              class="block max-h-full max-w-full object-contain"
+              [src]="client.url"
+              [alt]="client.alt"
+              loading="lazy"
+            />
+          </div>
         }
       </div>
     </div>

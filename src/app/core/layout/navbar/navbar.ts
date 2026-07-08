@@ -32,7 +32,7 @@ export class Navbar {
     { label: 'Home', route: '/' },
     { label: 'About', route: '/about' },
     { label: 'Projects', route: '/projects' },
-    // { label: 'Equipments', route: '/equipments' },
+    { label: 'Equipments', route: '/equipments' },
     // { label: 'Insights', route: '/insights' },
     { label: 'Contact', route: '/contact' },
   ];
