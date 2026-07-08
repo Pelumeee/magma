@@ -36,7 +36,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
-        secret: process.env.TURNSTILE_SECRET_KEY!,
+        secret: process.env['TURNSTILE_SECRET_KEY']!,
         response: turnstileToken,
       }),
     });
@@ -59,9 +59,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         'Content-Type': 'application/json',
         Authorization:
           'Basic ' +
-          Buffer.from(`${process.env.MJ_APIKEY_PUBLIC}:${process.env.MJ_APIKEY_PRIVATE}`).toString(
-            'base64',
-          ),
+          Buffer.from(
+            `${process.env['MJ_APIKEY_PUBLIC']}:${process.env['MJ_APIKEY_PRIVATE']}`,
+          ).toString('base64'),
       },
       body: JSON.stringify({
         Messages: [
