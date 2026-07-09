@@ -1,16 +1,11 @@
-import { AfterViewInit, Component, inject } from '@angular/core';
-import { AnimationsService } from '../../core/services/animations.service';
-import { Form } from "./components/form/form";
+import { Component } from '@angular/core';
+
+import { RevealDirective } from '../../core/directive/reveal-directive';
+import { Form } from './components/form/form';
 
 @Component({
   selector: 'app-contact',
-  imports: [Form],
+  imports: [Form, RevealDirective],
   templateUrl: './contact.html',
 })
-export class Contact implements AfterViewInit {
-  // animation = inject(AnimationsService);
-
-  ngAfterViewInit() {
-    // setTimeout(() => this.animation.initReveal(), 50);
-  }
-}
+export class Contact {}

@@ -3,17 +3,21 @@
     <div class="hero-glow opacity-[0.85]" aria-hidden="true"></div>
 
     <div class="w-[90%] max-w-7xl mx-auto">
-      <span class="eyebrow reveal in relative z-2">Contact</span>
+      <span class="eyebrow relative z-2" appReveal>Contact</span>
 
       <h1
         class="font-display font-extrabold font-stretch-110% leading-[0.92] tracking-[-0.02em] uppercase relative z-2 text-[clamp(30px,9vw,80px)] mt-4.5"
+        appReveal
+        [revealDelayMs]="150"
       >
         Let's work<br />
-        <span class="signal-text">together.</span>
+        <span class="text-signal">together.</span>
       </h1>
 
       <p
-        class="relative z-2 max-w-155 mt-6 reveal in text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
+        class="relative z-2 max-w-155 mt-6 text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
+        appReveal
+        [revealDelayMs]="1000"
       >
         Tell us about the scope. We'll come back with a plan, the right equipment and a price,
         within one business day.

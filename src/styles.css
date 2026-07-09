@@ -340,3 +340,11 @@ body {
 .stagger.in > *:nth-child(6) {
   transition-delay: 0.45s;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger > * {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -7,7 +7,6 @@ import { EQUIPMENTS, GalleryItem, equipmentsList } from '../../shared/data/equip
   selector: 'app-equipments',
   imports: [NgClass, RouterLink],
   templateUrl: './equipments.html',
-  styleUrl: './equipments.css',
 })
 export class Equipments {
   equipments: GalleryItem[] = EQUIPMENTS;
