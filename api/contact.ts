@@ -73,8 +73,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       body: JSON.stringify({
         Messages: [
           {
-            From: { Email: 'info@magmatechng.com', Name: 'Magma Website' },
-            To: [{ Email: 'oluwapelumi019a@gmail.com', Name: 'Magma' }],
+            From: {
+              Email: process.env['MJ_FROM_ADDRESS'],
+              Name: 'Magma Tech Services Nigeria Ltd',
+            },
+            To: [{ Email: process.env['MJ_TO_ADDRESS'], Name: 'Magma Tech Services Nigeria Ltd' }],
+            Bcc: [{ Email: process.env['MJ_BCC_ADDRESS'], Name: 'Admin' }],
             ReplyTo: { Email: email, Name: name },
             Subject: `New Enquiry — ${service}`,
             TextPart:
