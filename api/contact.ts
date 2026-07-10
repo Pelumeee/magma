@@ -73,7 +73,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       body: JSON.stringify({
         Messages: [
           {
-            From: { Email: 'classicpelmythe@gmail.com', Name: 'Magma Website' },
+            From: { Email: 'info@magmatechng.com', Name: 'Magma Website' },
             To: [{ Email: 'oluwapelumi019a@gmail.com', Name: 'Magma' }],
             ReplyTo: { Email: email, Name: name },
             Subject: `New Enquiry — ${service}`,
