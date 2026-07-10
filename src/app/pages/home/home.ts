@@ -3,10 +3,11 @@ import { RouterLink } from '@angular/router';
 import { GALLERY, GalleryItem } from '../../shared/data/gallery-data';
 import { Marquee } from './components/marquee/marquee';
 import { Hero } from './components/hero/hero';
+import { RevealDirective } from '../../core/directive/reveal-directive';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, Marquee, Hero],
+  imports: [RouterLink, Marquee, Hero, RevealDirective],
   templateUrl: './home.html',
 })
 export class Home {

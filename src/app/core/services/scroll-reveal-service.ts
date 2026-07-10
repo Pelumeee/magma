@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
-
 export class ScrollRevealService {
   private observer?: IntersectionObserver;
   private onceMap = new WeakMap<Element, boolean>();
@@ -23,7 +22,7 @@ export class ScrollRevealService {
         },
         {
           threshold: 0.15,
-          rootMargin: '0px 0px -10% 0px', 
+          rootMargin: '0px 0px -10% 0px',
         },
       );
     }

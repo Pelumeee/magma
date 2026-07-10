@@ -3,12 +3,12 @@
     <div class="hero-glow opacity-[0.85]" aria-hidden="true"></div>
 
     <div class="w-[90%] max-w-7xl mx-auto">
-      <span class="eyebrow relative z-2" appReveal>Contact</span>
+      <span class="eyebrow relative z-2">Contact</span>
 
       <h1
         class="font-display font-extrabold font-stretch-110% leading-[0.92] tracking-[-0.02em] uppercase relative z-2 text-[clamp(30px,9vw,80px)] mt-4.5"
         appReveal
-        [revealDelayMs]="150"
+        [revealDelay]="2"
       >
         Let's work<br />
         <span class="text-signal">together.</span>
@@ -17,7 +17,7 @@
       <p
         class="relative z-2 max-w-155 mt-6 text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
         appReveal
-        [revealDelayMs]="1000"
+        [revealDelay]="3"
       >
         Tell us about the scope. We'll come back with a plan, the right equipment and a price,
         within one business day.
@@ -31,7 +31,7 @@
     <div
       class="w-[90%] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-[clamp(40px,6vw,90px)] items-start"
     >
-      <div class="reveal-left in">
+      <div appReveal="reveal-left" class="">
         <div class="py-5 border-t border-(--steel-line)">
           <div class="font-mono text-[11px] tracking-[0.16em] uppercase text-signal mb-2">
             Location
@@ -86,7 +86,7 @@
         </div>
       </div>
 
-      <div class="reveal-right in">
+      <div appReveal="reveal-right">
         <span class="eyebrow">Request a quote</span>
         <h2
           class="font-display font-extrabold font-stretch-115% leading-[0.92] tracking-[-0.01em] uppercase text-[clamp(28px,3.6vw,46px)] mt-4.5 mb-7.5"
@@ -103,7 +103,8 @@
       class="w-[90%] max-w-7xl mx-auto px-[clamp(20px,5vw,64px)] grid grid-cols-1 md:grid-cols-3 gap-px bg-foundry-line border border-foundry-line"
     >
       <div
-        class="reveal-scale in text-left bg-foundry px-[clamp(20px,2.5vw,36px)] py-[clamp(28px,4vw,52px)]"
+        appReveal="reveal-scale"
+        class="text-left bg-foundry px-[clamp(20px,2.5vw,36px)] py-[clamp(28px,4vw,52px)]"
       >
         <div
           class="font-display font-extrabold font-stretch-110% text-[clamp(40px,6vw,84px)] leading-[0.9] text-foundry-ink"
@@ -117,7 +118,9 @@
       </div>
 
       <div
-        class="reveal-scale d1 in text-left bg-foundry px-[clamp(20px,2.5vw,36px)] py-[clamp(28px,4vw,52px)]"
+        appReveal="reveal-scale"
+        [revealDelay]="1"
+        class="text-left bg-foundry px-[clamp(20px,2.5vw,36px)] py-[clamp(28px,4vw,52px)]"
       >
         <div
           class="font-display font-extrabold font-stretch-110% text-[clamp(40px,6vw,84px)] leading-[0.9] text-foundry-ink"
@@ -131,7 +134,9 @@
       </div>
 
       <div
-        class="reveal-scale d2 in text-left bg-foundry px-[clamp(20px,2.5vw,36px)] py-[clamp(28px,4vw,52px)]"
+        appReveal="reveal-scale"
+        [revealDelay]="2"
+        class="text-left bg-foundry px-[clamp(20px,2.5vw,36px)] py-[clamp(28px,4vw,52px)]"
       >
         <div
           class="font-display font-extrabold font-stretch-110% text-[clamp(40px,6vw,84px)] leading-[0.9] text-foundry-ink"

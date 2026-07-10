@@ -3,6 +3,7 @@ import {
   ElementRef,
   Input,
   OnDestroy,
+  OnInit,
   Renderer2,
   afterNextRender,
   inject,
@@ -15,7 +16,7 @@ export type RevealVariant = 'reveal' | 'reveal-left' | 'reveal-right' | 'reveal-
   selector: '[appReveal]',
   standalone: true,
 })
-export class RevealDirective implements OnDestroy {
+export class RevealDirective implements OnInit, OnDestroy {
   @Input({
     alias: 'appReveal',
     transform: (value: RevealVariant | '') => (value === '' ? 'reveal' : value),
@@ -24,26 +25,46 @@ export class RevealDirective implements OnDestroy {
 
   @Input() revealDelay?: 1 | 2 | 3 | 4 | 5;
 
-
   @Input() revealDelayMs?: number;
 
   @Input() revealOnce = true;
+
+  @Input() staggerStepMs = 90;
+
+  @Input() staggerMaxMs?: number;
 
   private el = inject(ElementRef<HTMLElement>);
   private renderer = inject(Renderer2);
   private scrollReveal = inject(ScrollRevealService);
 
   constructor() {
+    afterNextRender(() => {
+      if (this.variant === 'stagger') {
+        this.applyStaggerDelays();
+      }
+      this.scrollReveal.observe(this.el.nativeElement, this.revealOnce);
+    });
+  }
+
+  ngOnInit(): void {
     this.renderer.addClass(this.el.nativeElement, this.variant);
 
     if (this.revealDelayMs != null) {
-      this.renderer.setStyle(this.el.nativeElement, 'transition-delay', `${this.revealDelayMs}ms!`);
+      this.renderer.setStyle(this.el.nativeElement, '--reveal-delay', `${this.revealDelayMs}ms`);
     } else if (this.revealDelay) {
       this.renderer.addClass(this.el.nativeElement, `d${this.revealDelay}`);
     }
+  }
 
-    afterNextRender(() => {
-      this.scrollReveal.observe(this.el.nativeElement, this.revealOnce);
+  private applyStaggerDelays(): void {
+    const children = Array.from(this.el.nativeElement.children);
+
+    children.forEach((child, index) => {
+      let delay = index * this.staggerStepMs;
+      if (this.staggerMaxMs != null) {
+        delay = Math.min(delay, this.staggerMaxMs);
+      }
+      this.renderer.setStyle(child, 'transitionDelay', `${delay}ms`);
     });
   }
 

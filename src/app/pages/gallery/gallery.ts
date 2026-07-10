@@ -2,10 +2,11 @@ import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { GALLERY, GalleryItem } from '../../shared/data/gallery-data';
+import { RevealDirective } from '../../core/directive/reveal-directive';
 
 @Component({
   selector: 'app-gallery',
-  imports: [RouterLink, NgClass],
+  imports: [RouterLink, NgClass, RevealDirective],
   templateUrl: './gallery.html',
 })
 

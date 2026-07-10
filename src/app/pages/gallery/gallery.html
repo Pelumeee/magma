@@ -6,12 +6,16 @@
       <span class="eyebrow reveal in relative z-2">Projects</span>
 
       <h1
+        appReveal
+        [revealDelay]="2"
         class="font-display font-extrabold font-stretch-110% leading-[0.92] tracking-[-0.02em] uppercase relative z-2 text-[clamp(30px,9vw,80px)] mt-4.5"
       >
         Our <span class="text-signal">Work</span>
       </h1>
 
       <p
+        appReveal
+        [revealDelay]="3"
         class="relative z-2 max-w-155 mt-6 reveal in text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
       >
         Selected projects across refinery rehabilitation, plant maintenance, drilling support and
@@ -34,7 +38,10 @@
       </div> -->
 
       <div
-        class="gal-grid stagger in grid grid-cols-2 md:grid-cols-12 gap-[clamp(12px,1.4vw,18px)] grid-flow-dense"
+        appReveal="stagger"
+        [staggerStepMs]="70"
+        [staggerMaxMs]="600"
+        class="gal-grid grid grid-cols-2 md:grid-cols-12 gap-[clamp(12px,1.4vw,18px)] grid-flow-dense"
       >
         @for (item of gallery; track item.img) {
           <article
@@ -78,13 +85,18 @@
   <section class="relative py-[clamp(72px,11vw,150px)] bg-(--ink) cta">
     <div class="cta-glow" aria-hidden="true"></div>
 
-    <div class="w-[90%] mx-auto px-(--gut) stagger in relative z-2 text-center max-w-220">
+    <div
+      appReveal="stagger"
+      [staggerStepMs]="70"
+      [staggerMaxMs]="600"
+      class="w-[90%] mx-auto px-(--gut) relative z-2 text-center max-w-220"
+    >
       <span class="eyebrow justify-center"> Your next project </span>
 
       <h2
-        class="font-display font-extrabold leading-[0.92] uppercase mt-4.5 text-[clamp(38px,7vw,104px)] font-stretch-108% tracking-[-0.02em]"
+        class="cta-h2"
       >
-        Need a <em class="not-italic text-signal">Crane?</em>
+        Need a <br> <em class="not-italic text-signal">Crane?</em>
       </h2>
 
       <p class="text-concrete max-w-135 mx-auto mt-6 mb-9">

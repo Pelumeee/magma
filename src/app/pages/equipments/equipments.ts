@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { EQUIPMENTS, GalleryItem, equipmentsList } from '../../shared/data/equipment-data';
+import { RevealDirective } from '../../core/directive/reveal-directive';
 
 @Component({
   selector: 'app-equipments',
-  imports: [NgClass, RouterLink],
+  imports: [NgClass, RouterLink, RevealDirective],
   templateUrl: './equipments.html',
 })
 export class Equipments {

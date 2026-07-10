@@ -6,13 +6,17 @@
       <span class="eyebrow reveal in relative z-2">About Magma</span>
 
       <h1
+        appReveal
+        [revealDelay]="2"
         class="font-display font-extrabold font-stretch-110% leading-[0.92] tracking-[-0.02em] uppercase relative z-2 text-[clamp(30px,9vw,80px)] mt-4.5"
       >
         Indigenous.<br />Industrial.<br /><span class="text-signal">Indispensable.</span>
       </h1>
 
       <p
-        class="relative z-2 max-w-155 mt-6 reveal in text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
+        appReveal
+        [revealDelay]="3"
+        class="relative z-2 max-w-155 mt-6 text-[clamp(14px,2.1vw,18px)] leading-normal text-concrete font-normal"
       >
         An indigenous service firm committed to delivering quality heavy-lift and logistics
         solutions to the sectors that keep Nigeria running.
@@ -27,7 +31,10 @@
     <div
       class="w-[90%] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[clamp(36px,6vw,90px)] items-center"
     >
-      <div class="reveal-left in relative aspect-4/5 border border-(--steel-line) overflow-hidden">
+      <div
+        appReveal="reveal-left"
+        class="relative aspect-4/5 border border-(--steel-line) overflow-hidden"
+      >
         <div class="absolute inset-0 z-0" aria-hidden="true">
           <img
             src="about.jpeg"
@@ -51,7 +58,7 @@
           </div>
         </div>
       </div>
-      <div class="reveal-right in">
+      <div appReveal="reveal-right" class="">
         <span class="eyebrow">Who we are</span>
 
         <h2
@@ -113,7 +120,7 @@
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-px bg-(--steel-line) border border-(--steel-line)"
       >
-        <div class="reveal in bg-ink p-[clamp(28px,3.5vw,44px)]">
+        <div appReveal class="bg-ink p-[clamp(28px,3.5vw,44px)]">
           <div class="font-mono text-[13px] tracking-widest text-signal">// 01</div>
 
           <h3 class="font-display font-extrabold uppercase leading-[0.95] text-[22px] mt-5 mb-3">
@@ -125,7 +132,7 @@
           </p>
         </div>
 
-        <div class="reveal d1 in bg-ink p-[clamp(28px,3.5vw,44px)]">
+        <div appReveal [revealDelay]="1" class="bg-ink p-[clamp(28px,3.5vw,44px)]">
           <div class="font-mono text-[13px] tracking-widest text-signal">// 02</div>
 
           <h3 class="font-display font-extrabold uppercase leading-[0.95] text-[22px] mt-5 mb-3">
@@ -137,7 +144,7 @@
           </p>
         </div>
 
-        <div class="reveal d2 in bg-ink p-[clamp(28px,3.5vw,44px)]">
+        <div appReveal [revealDelay]="2" class="bg-ink p-[clamp(28px,3.5vw,44px)]">
           <div class="font-mono text-[13px] tracking-widest text-signal">// 03</div>
 
           <h3 class="font-display font-extrabold uppercase leading-[0.95] text-[22px] mt-5 mb-3">
@@ -171,7 +178,12 @@
           A short history of building heavy-lift capability across Nigeria's most demanding sites.
         </p>
       </div>
-      <div class="reveal in border-l-2 border-(--steel-line)">
+      <div
+        appReveal="stagger"
+        [staggerStepMs]="70"
+        [staggerMaxMs]="600"
+        class="border-l-2 border-(--steel-line)"
+      >
         @for (item of timeline; track item.year) {
           <div
             class="relative grid md:grid-cols-[130px_1fr] gap-7 py-6.5 pl-8.5 border-b border-(--steel-line)"
@@ -221,7 +233,10 @@
         </p>
       </div>
       <div
-        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px bg-(--foundry-line) border border-(--foundry-line) stagger in"
+        appReveal="stagger"
+        [staggerStepMs]="70"
+        [staggerMaxMs]="600"
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-px bg-(--foundry-line) border border-(--foundry-line)"
       >
         @for (item of sectors; track item.num) {
           <div
@@ -255,12 +270,15 @@
   <!-- CTA -->
   <section class="py-[clamp(72px,11vw,150px)] bg-ink cta">
     <div class="cta-glow" aria-hidden="true"></div>
-    <div class="w-[90%] max-w-220 mx-auto relative z-2 text-center stagger in">
+    <div
+      appReveal="stagger"
+      [staggerStepMs]="70"
+      [staggerMaxMs]="600"
+      class="w-[90%] max-w-220 mx-auto relative z-2 text-center"
+    >
       <span class="eyebrow justify-center">Work with Magma</span>
 
-      <h2
-        class="font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.02em] uppercase text-[clamp(38px,7vw,104px)] mt-4.5"
-      >
+      <h2 class="cta-h2">
         Let's move<br />
         something <em class="not-italic text-signal">heavy.</em>
       </h2>

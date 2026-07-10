@@ -92,6 +92,9 @@
   .cl-card {
     @apply flex aspect-16/10 items-center justify-center rounded-[10px] bg-white p-[clamp(14px,2vw,22px)] transition-all duration-300 ease-out hover:-translate-y-1.25 hover:shadow-[0_16px_34px_-12px_rgba(0,0,0,0.55)];
   }
+  .cta-h2 {
+    @apply font-display font-extrabold font-stretch-108% leading-[0.92] tracking-[-0.02em] uppercase text-[clamp(36px,7vw,80px)] mt-4.5;
+  }
 }
 
 html {
@@ -242,7 +245,6 @@ body {
     radial-gradient(50% 80% at 80% 0%, rgba(238, 120, 28, 0.08), transparent 60%);
   z-index: 0;
 }
-
 /* ============================================================
    REVEAL ANIMATIONS
    ============================================================ */
@@ -256,21 +258,6 @@ body {
 .reveal.in {
   opacity: 1;
   transform: none;
-}
-.reveal.d1 {
-  transition-delay: 0.08s;
-}
-.reveal.d2 {
-  transition-delay: 0.16s;
-}
-.reveal.d3 {
-  transition-delay: 0.24s;
-}
-.reveal.d4 {
-  transition-delay: 0.32s;
-}
-.reveal.d5 {
-  transition-delay: 0.4s;
 }
 .reveal-left {
   opacity: 0;
@@ -306,6 +293,37 @@ body {
   transform: none;
 }
 
+/* Fallback delay for all variants, driven by --reveal-delay (set via
+   [revealDelayMs] on the directive). Falls back to 0s if unset. */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+/* Preset delay buckets (set via [revealDelay] on the directive).
+   Written as standalone classes — not compounded with .reveal — so they
+   apply no matter which variant class (.reveal, .reveal-left,
+   .reveal-right, .reveal-scale) the element also carries. Placed after
+   the fallback rule above so equal-specificity ties resolve in their
+   favor via source order. */
+.d1 {
+  transition-delay: 0.08s;
+}
+.d2 {
+  transition-delay: 0.16s;
+}
+.d3 {
+  transition-delay: 0.24s;
+}
+.d4 {
+  transition-delay: 0.32s;
+}
+.d5 {
+  transition-delay: 1s;
+}
+
 /* ============================================================
    SCROLL ANIMATIONS
    ============================================================ */
@@ -314,35 +332,24 @@ body {
 .stagger > * {
   opacity: 0;
   transform: translateY(28px);
-  transition:
-    opacity 0.7s var(--ease-out),
-    transform 0.7s var(--ease-out);
+  transition: all 0.7s var(--ease-out);
 }
+
 .stagger.in > * {
   opacity: 1;
   transform: none;
 }
-.stagger.in > *:nth-child(1) {
-  transition-delay: 0s;
-}
-.stagger.in > *:nth-child(2) {
-  transition-delay: 0.09s;
-}
-.stagger.in > *:nth-child(3) {
-  transition-delay: 0.18s;
-}
-.stagger.in > *:nth-child(4) {
-  transition-delay: 0.27s;
-}
-.stagger.in > *:nth-child(5) {
-  transition-delay: 0.36s;
-}
-.stagger.in > *:nth-child(6) {
-  transition-delay: 0.45s;
+
+.stagger > *:hover {
+  transition-delay: 0s !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger > * {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .stagger > * {
     transition: none !important;
     opacity: 1 !important;
     transform: none !important;
