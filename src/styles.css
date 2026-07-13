@@ -355,3 +355,68 @@ body {
     transform: none !important;
   }
 }
+
+/* ============================================================
+   LINE REVEAL (masked slide-up text, e.g. hero h1)
+   ============================================================ */
+
+/* Each .line wrapper clips its inner span — same job as your existing
+   `overflow-hidden` Tailwind utility, kept here too so it works even if
+   the utility class is ever removed. */
+.line {
+  display: block;
+  overflow: hidden;
+}
+
+.line > span {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition:
+    transform 0.95s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lines.in .line > span {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line > span {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ============================================================
+   PARALLAX IMAGE WRAPPER (plates + gallery)
+   ============================================================ */
+.para-wrap {
+  position: absolute;
+  inset: -12% 0;
+  z-index: 0;
+  overflow: visible;
+}
+.para-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  will-change: transform;
+  transition: transform 1s var(--ease);
+}
+.plate:hover .para-wrap img {
+  transform: scale(1.08);
+}
+.gcard:hover .para-wrap img {
+  transform: scale(1.06);
+}
+.feat:hover .para-wrap img {
+  transform: scale(1.04);
+}
+.post:hover .para-wrap img {
+  transform: scale(1.06);
+}

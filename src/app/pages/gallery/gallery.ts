@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { GALLERY, GalleryItem } from '../../shared/data/gallery-data';
 import { RevealDirective } from '../../core/directive/reveal-directive';
+import { ParallaxDirective } from '../../core/directive/parallax-directive';
 
 @Component({
   selector: 'app-gallery',
-  imports: [RouterLink, NgClass, RevealDirective],
+  imports: [RouterLink, NgClass, RevealDirective, ParallaxDirective],
   templateUrl: './gallery.html',
 })
 

@@ -147,8 +147,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }),
     });
 
-    const body = await mailjetRes.json();
-    console.log('Mailjet status:', mailjetRes.status, JSON.stringify(body, null, 2));
+    // const body = await mailjetRes.json();
+    // console.log('Mailjet status:', mailjetRes.status, JSON.stringify(body, null, 2));
 
     if (!mailjetRes.ok) {
       const errBody = await mailjetRes.text();

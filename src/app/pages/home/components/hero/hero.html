@@ -2,6 +2,9 @@
   <!-- Real photo with parallax -->
   <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
     <img
+      appParallax
+      parallaxMode="fixed"
+      [parallaxSpeed]="0.38"
       src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
       alt="Heavy-lift crane operations"
       id="hero-img"
@@ -9,7 +12,7 @@
       class="absolute top-[-15%] left-0 w-full h-[130%] object-cover object-[center_35%] will-change-transform"
     />
   </div>
-  
+
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="hero-vignette" aria-hidden="true"></div>
 
@@ -17,27 +20,30 @@
     <span class="eyebrow reveal in">Nigeria's Heavy-Lift Specialists</span>
     <h1
       class="font-display font-extrabold uppercase leading-[0.92] text-[clamp(35px,12vw,80px)] font-stretch-110% tracking-[-0.02em] mt-5.5 mb-6.5"
+      appReveal="lines"
     >
-      <span class="block overflow-hidden"><span>We lift.</span></span>
-      <span class="block overflow-hidden"><span>We move.</span></span>
-      <span class="block overflow-hidden"
+      <span class="line block overflow-hidden"><span>We lift.</span></span>
+      <span class="line block overflow-hidden"><span>We move.</span></span>
+      <span class="line block overflow-hidden"
         ><span>We <em class="text-signal not-italic">deliver.</em></span></span
       >
     </h1>
     <p
-      class="reveal in mb-8.5 max-w-170 text-[clamp(18px,2.1vw,21px)] leading-normal font-normal text-concrete"
+      appReveal
+      class="mb-8.5 max-w-170 text-[clamp(18px,2.1vw,21px)] leading-normal font-normal text-concrete"
     >
       Providing crane services, engineered lift, and specialised transportation and rigging
       solutions across multiple market sectors in Nigeria. We are engineered to lift your projects
       to greater heights.
     </p>
 
-    <div class="flex flex-wrap gap-3.5 reveal d1 in">
+    <div appReveal [revealDelay]="2" class="flex flex-wrap gap-3.5">
       <a href="#services" class="btn btn-signal">Our services <span class="arr">→</span></a>
       <a href="#projects" class="btn btn-ghost">View projects <span class="arr">→</span></a>
     </div>
     <div
       class="relative z-3 mt-[clamp(40px,7vw,90px)] grid grid-cols-2 border-t border-white/10 lg:grid-cols-4"
+      appReveal="counter"
     >
       <div class="reveal in d1 border-r border-white/10 py-5.5 pr-5 pb-1">
         <div class="font-display text-[clamp(26px,4vw,40px)] font-extrabold font-stretch-110%">
@@ -48,7 +54,7 @@
 
       <div class="reveal in d2 lg:border-r! border-white/10! py-5.5 pr-5 pb-1">
         <div class="font-display text-[clamp(26px,4vw,40px)] font-extrabold font-stretch-110%">
-          <span class="text-signal" data-count="300" data-suffix="T"> 300T </span>
+          <span class="text-signal" data-count="300" data-suffix="T">300T</span>
         </div>
         <div class="font-mono text-[11px] uppercase tracking-[0.12em] text-white/45">
           Max lift capacity
@@ -57,7 +63,7 @@
 
       <div class="reveal in d3 border-r border-white/10 py-5.5 pr-5 pb-1">
         <div class="font-display text-[clamp(26px,4vw,40px)] font-extrabold font-stretch-110%">
-          30+
+          <span data-count="30" data-suffix="+">30+</span>
         </div>
         <div class="font-mono text-[11px] uppercase tracking-[0.12em] text-white/45">
           Cranes in Fleet
@@ -66,7 +72,7 @@
 
       <div class="reveal in d4 py-5.5 pr-5 pb-1">
         <div class="font-display text-[clamp(26px,4vw,40px)] font-extrabold font-stretch-110%">
-          <span data-count="100">100+</span>
+          <span data-count="100" data-suffix="+">100+</span>
         </div>
         <div class="font-mono text-[11px] uppercase tracking-[0.12em] text-white/45">
           Staff Strength

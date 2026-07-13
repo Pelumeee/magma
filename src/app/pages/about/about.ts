@@ -20,7 +20,6 @@ interface SectorItem {
   imports: [RouterLink, RevealDirective],
   templateUrl: './about.html',
 })
-
 export class About {
   timeline: TimelineItem[] = [
     {
@@ -54,7 +53,7 @@ export class About {
         'Trusted on refinery rehabilitation, plant maintenance, drilling support and naval logistics across the country.',
     },
   ];
-  
+
   sectors: SectorItem[] = [
     {
       num: '01',

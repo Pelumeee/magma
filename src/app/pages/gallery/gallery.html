@@ -48,7 +48,8 @@
             class="group relative isolate overflow-hidden border border-(--steel-line) reveal"
             [ngClass]="[sizeStyles[item.size].span, sizeStyles[item.size].aspect]"
           >
-            <div class="absolute inset-y-[-12%] inset-x-0 z-0 overflow-visible" aria-hidden="true">
+            <div appParallax
+              [parallaxSpeed]="0.14" class="absolute inset-y-[-12%] inset-x-0 z-0 overflow-visible" aria-hidden="true">
               <img
                 [src]="item.img"
                 [alt]="item.scope"

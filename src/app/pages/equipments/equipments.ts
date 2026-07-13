@@ -3,10 +3,11 @@ import { RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { EQUIPMENTS, GalleryItem, equipmentsList } from '../../shared/data/equipment-data';
 import { RevealDirective } from '../../core/directive/reveal-directive';
+import { ParallaxDirective } from '../../core/directive/parallax-directive';
 
 @Component({
   selector: 'app-equipments',
-  imports: [NgClass, RouterLink, RevealDirective],
+  imports: [NgClass, RouterLink, RevealDirective, ParallaxDirective],
   templateUrl: './equipments.html',
 })
 export class Equipments {
