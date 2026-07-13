@@ -390,33 +390,16 @@ body {
   }
 }
 
-/* ============================================================
-   PARALLAX IMAGE WRAPPER (plates + gallery)
-   ============================================================ */
-.para-wrap {
-  position: absolute;
-  inset: -12% 0;
-  z-index: 0;
-  overflow: visible;
+html.lenis,
+html.lenis body {
+  height: auto;
 }
-.para-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  will-change: transform;
-  transition: transform 1s var(--ease);
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
 }
-.plate:hover .para-wrap img {
-  transform: scale(1.08);
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
-.gcard:hover .para-wrap img {
-  transform: scale(1.06);
-}
-.feat:hover .para-wrap img {
-  transform: scale(1.04);
-}
-.post:hover .para-wrap img {
-  transform: scale(1.06);
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
